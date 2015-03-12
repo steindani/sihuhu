@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sihuhu" nsPrefix="hu.bme.mit.rnd">
+  <eClassifiers xsi:type="ecore:EClass" name="World">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tracks" upperBound="-1"
+        eType="#//Track" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trains" upperBound="-1"
+        eType="#//Train" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Track">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rails" upperBound="-1"
+        eType="#//Rail" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="switches" upperBound="-1"
+        eType="#//Switch" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrackElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="train" eType="#//Train"
+        eOpposite="#//Train/ontrackelement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rail" eType="#//Rail" eOpposite="#//Rail/trackelement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rail" eSuperTypes="#//TrackElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trackelement" eType="#//TrackElement"
+        eOpposite="#//TrackElement/rail"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Switch" eSuperTypes="#//TrackElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//SwitchConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Rail" changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchConnection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Rail"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Rail"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Train">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontrackelement" upperBound="2"
+        eType="#//TrackElement" eOpposite="#//TrackElement/train"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nexttrackelement" eType="#//TrackElement"/>
+  </eClassifiers>
+</ecore:EPackage>
