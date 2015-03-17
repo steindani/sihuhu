@@ -15,31 +15,31 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrackElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="train" eType="#//Train"
-        eOpposite="#//Train/ontrackelement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rail" eType="#//Rail" eOpposite="#//Rail/trackelement"/>
+        eOpposite="#//Train/onTracks"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rail" eSuperTypes="#//TrackElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trackelement" eType="#//TrackElement"
-        eOpposite="#//TrackElement/rail"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedTo" lowerBound="1"
         eType="#//Signal" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedFrom" lowerBound="1"
         eType="#//Signal" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//TrackElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//TrackElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Switch" eSuperTypes="#//TrackElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
         eType="#//SwitchConnection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectedRails" upperBound="-1"
         eType="#//Rail" changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeConnection" eType="#//SwitchConnection"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SwitchConnection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Rail"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Rail"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchConnection" eSuperTypes="#//Rail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="free" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Train">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ontrackelement" upperBound="2"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextElement" eType="#//TrackElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onTracks" upperBound="-1"
         eType="#//TrackElement" eOpposite="#//TrackElement/train"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nexttrackelement" eType="#//TrackElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Signal">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextRail" eType="#//Rail"
