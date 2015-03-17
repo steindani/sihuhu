@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sihuhu" nsURI="hu.bme.mit.rnd.sihuhu" nsPrefix="hu.bme.mit.rnd">
-  <eClassifiers xsi:type="ecore:EClass" name="World">
+  <eClassifiers xsi:type="ecore:EClass" name="World" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracks" upperBound="-1"
         eType="#//Track" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trains" upperBound="-1"
         eType="#//Train" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Track">
+  <eClassifiers xsi:type="ecore:EClass" name="Track" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rails" upperBound="-1"
         eType="#//Rail" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="switches" upperBound="-1"
         eType="#//Switch" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrackElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="TrackElement" abstract="true" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="train" eType="#//Train"
         eOpposite="#//Train/onTracks"/>
   </eClassifiers>
@@ -36,15 +36,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="free" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         changeable="false" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Train">
+  <eClassifiers xsi:type="ecore:EClass" name="Train" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextElement" eType="#//TrackElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="onTracks" upperBound="-1"
         eType="#//TrackElement" eOpposite="#//TrackElement/train"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Signal">
+  <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextRail" eType="#//Rail"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
 </ecore:EPackage>
