@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu">
+  <tracks name="t1">
+    <rails name="t1segN1" from="t1swNE" to="t1swNW">
+      <allowedTo name="t1signalN1_W"/>
+      <allowedFrom name="t1signalN1_E"/>
+    </rails>
+    <rails name="t1segN2" train="train1" from="t1swNE" to="t1swNW">
+      <allowedTo name="t1signalN2_W"/>
+      <allowedFrom name="t1signalN2_E"/>
+    </rails>
+    <rails name="t1segS1" train="train2" from="t1swSE" to="t1swSW">
+      <allowedTo name="t1signalS1_W"/>
+      <allowedFrom name="t1signalS1_E"/>
+    </rails>
+    <rails name="t1segS2" from="t1swSW" to="t1swSE">
+      <allowedTo name="t1signalS2_E"/>
+      <allowedFrom name="t1signalS2_W"/>
+    </rails>
+    <rails name="t1segW" from="t1swNW" to="t1swSW">
+      <allowedTo name="t1signalW_S"/>
+      <allowedFrom name="t1signalW_N"/>
+    </rails>
+    <rails name="t1segE" from="t1swNE" to="t1swSE">
+      <allowedTo name="t1signalE_S"/>
+      <allowedFrom name="t1signalE_N"/>
+    </rails>
+    <switches name="t1swNW" activeConnection="t1scNW1">
+      <connections name="t1scNW2" from="t1segN2" to="t1segW">
+        <allowedTo name="t1signalScNW2_W"/>
+        <allowedFrom name="t1signalScNW2_N"/>
+      </connections>
+      <connections name="t1scNW1" from="t1segN1" to="t1segW">
+        <allowedTo name="t1signalScNW1_W"/>
+        <allowedFrom name="t1signalScNW1_N"/>
+      </connections>
+    </switches>
+    <switches name="t1swNE" activeConnection="t1scNE1">
+      <connections name="t1scNE1" from="t1segE" to="t1segN1">
+        <allowedTo name="t1signalScNE1_N"/>
+        <allowedFrom name="t1signalScNE1_E"/>
+      </connections>
+      <connections name="t1scNE2" from="t1segN2" to="t1segE">
+        <allowedTo name="t1signalScNE2_E"/>
+        <allowedFrom name="t1signalScNE2_N"/>
+      </connections>
+    </switches>
+    <switches name="t1swSW" activeConnection="t1scSW1">
+      <connections name="t1scSW1" from="t1segW" to="t1segS1">
+        <allowedTo name="t1signalScSW1_S"/>
+        <allowedFrom name="t1signalScSW1_W"/>
+      </connections>        
+      <connections name="t1scSW2" from="t1segW" to="t1segS2">
+        <allowedTo name="t1signalScSW2_S"/>
+        <allowedFrom name="t1signalScSW2_W"/>
+      </connections>
+    </switches>
+    <switches name="t1swSE" activeConnection="t1scSE2">
+      <connections name="t1scSE1" from="t1segE" to="t1segS1">
+        <allowedTo name="t1signalScSE1_S"/>
+        <allowedFrom name="t1signalScSE1_E"/>
+      </connections>
+      <connections name="t1scSE2" from="t1segE" to="t1segS2">
+        <allowedTo name="t1signalScSE2_S"/>
+        <allowedFrom name="t1signalScSE2_E"/>
+      </connections>
+    </switches>
+  </tracks>
+  <trains name="train1" nextElement="t1swNE" onTracks="t1segN2"/>
+  <trains name="train2" nextElement="t1scSW1" onTracks="t1segS1"/>
+</hu.bme.mit.rnd:World>
