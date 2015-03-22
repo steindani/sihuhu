@@ -88,9 +88,6 @@
           <children xmi:type="notation:Node" xmi:id="_rLZ9YMjJEeS5Kb5gAEruKQ" type="2003" element="_rLEmMMjJEeS5Kb5gAEruKQ">
             <children xmi:type="notation:Node" xmi:id="_rLakcMjJEeS5Kb5gAEruKQ" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_rLakccjJEeS5Kb5gAEruKQ" type="7004">
-              <children xmi:type="notation:Node" xmi:id="__SeHQMzEEeS7banKGuNWgA" type="3010" element="__RsEIMzEEeS7banKGuNWgA">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="__SeHQczEEeS7banKGuNWgA"/>
-              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_rLakcsjJEeS5Kb5gAEruKQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_rLakc8jJEeS5Kb5gAEruKQ"/>
             </children>
@@ -561,11 +558,6 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
-          <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_IFHooMzFEeS7banKGuNWgA" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-            <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </computedStyleDescriptions>
           <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_e9ZIYMjJEeS5Kb5gAEruKQ">
             <key xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_onSI0MwAEeSik8qYjj_nSg">
@@ -648,14 +640,6 @@
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_v0kkAcwCEeSik8qYjj_nSg" key="_eJd0MMwCEeSik8qYjj_nSg">
                 <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_v0kkA8wCEeSik8qYjj_nSg" value="_v0kkAswCEeSik8qYjj_nSg">
                   <key xmi:type="ecore:EClass" href="sihuhu.ecore#//Signal"/>
-                </value>
-              </value>
-            </value>
-            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="__RsrMMzEEeS7banKGuNWgA">
-              <key xmi:type="ecore:EAttribute" href="sihuhu.ecore#//SwitchConnection/free"/>
-              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="__RsrMczEEeS7banKGuNWgA" key="__RsEIMzEEeS7banKGuNWgA">
-                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__RtSQczEEeS7banKGuNWgA" value="_IFHooMzFEeS7banKGuNWgA">
-                  <key xmi:type="ecore:EClass" href="sihuhu.ecore#//SwitchConnection"/>
                 </value>
               </value>
             </value>
@@ -765,16 +749,6 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_IFGahMzFEeS7banKGuNWgA" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="__RsEIMzEEeS7banKGuNWgA" name="/free : EBoolean = false" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="sihuhu.ecore#//SwitchConnection/free"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="sihuhu.ecore#//SwitchConnection/free"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IFIPsMzFEeS7banKGuNWgA" labelAlignment="LEFT" description="_IFHooMzFEeS7banKGuNWgA">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_IFIPsczFEeS7banKGuNWgA" red="39" green="76" blue="114"/>
-            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_IFIPsszFEeS7banKGuNWgA"/>
-            <color xmi:type="viewpoint:RGBValues" xmi:id="_IFIPs8zFEeS7banKGuNWgA"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_t92P0MjJEeS5Kb5gAEruKQ" sourceNode="_pIr3sMjJEeS5Kb5gAEruKQ" targetNode="_lJKuIMjJEeS5Kb5gAEruKQ">
         <target xmi:type="ecore:EClass" href="sihuhu.ecore#//Rail"/>
@@ -1070,7 +1044,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_8IO7tMzLEeSvpPuKeVH4fg" red="228" green="228" blue="228"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2ipMMMzLEeSvpPuKeVH4fg" name="name : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@1b89b1ac{platform:/resource/hu.bme.mit.rnd.sihuhu/model/sihuhu.ecore#//NamedElement/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2ipMMMzLEeSvpPuKeVH4fg" name="name : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="sihuhu.ecore#//NamedElement/name"/>
           <semanticElements xmi:type="ecore:EAttribute" href="sihuhu.ecore#//NamedElement/name"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_8IUbQMzLEeSvpPuKeVH4fg" labelAlignment="LEFT">

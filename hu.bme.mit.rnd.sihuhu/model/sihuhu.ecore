@@ -32,10 +32,7 @@
         eType="#//Rail" changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activeConnection" eType="#//SwitchConnection"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SwitchConnection" eSuperTypes="#//Rail">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="free" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        changeable="false" volatile="true" transient="true" derived="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchConnection" eSuperTypes="#//Rail"/>
   <eClassifiers xsi:type="ecore:EClass" name="Train" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextElement" eType="#//TrackElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="onTracks" upperBound="-1"
