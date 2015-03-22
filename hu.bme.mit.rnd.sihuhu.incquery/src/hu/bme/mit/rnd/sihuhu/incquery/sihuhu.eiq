@@ -1,0 +1,6 @@
+package hu.bme.mit.rnd.sihuhu.incquery
+import "hu.bme.mit.rnd.sihuhu"
+
+pattern tracksWithName(T,name) {
+	Track.name(T,name);
+}
