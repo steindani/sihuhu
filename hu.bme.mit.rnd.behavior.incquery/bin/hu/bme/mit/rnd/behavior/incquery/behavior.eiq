@@ -1,0 +1,41 @@
+package hu.bme.mit.rnd.behavior.incquery
+import "hu.bme.mit.rnd.behavior"
+
+//------------------------------- // Support //-------------------------------
+
+pattern componentStates(C:Component, S:State) {
+	Component.states(C,S);
+}
+
+//------------------------------- // Validate //-------------------------------
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "Current state have to be one of the components states",
+			location = C)
+pattern invalidCurrentState(C:Component, S:State) {
+	Component.currentState(C,S);
+	neg find componentStates(C,S);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A transitions Guard state have to be another component's state",
+			location = T)
+pattern invalidGuardState(T:Transition, S:State) {
+	Component.transitions(C,T);
+	Transition.guardStates(T,S);
+	Component.states(C,S);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A transitions Triggering and Generated event have to be different",
+			location = T)
+pattern invalidGeneratedEvent(T:Transition) {
+	Transition.triggeringEvent(T,E);
+	Transition.generatedEvent(T,E);
+}
+
+//------------------------------- // Derived //--------------------------------
+
