@@ -27,7 +27,9 @@ import org.eclipse.incquery.runtime.util.IncQueryLoggingUtil;
  * 
  * <p>Original source:
  * <code><pre>
- * pattern tracksWithName(T,name) {
+ * //------------------------------- // Support //-------------------------------
+ * 
+ * pattern tracksWithName(T:Track,name) {
  * 	Track.name(T,name);
  * }
  * </pre></code>

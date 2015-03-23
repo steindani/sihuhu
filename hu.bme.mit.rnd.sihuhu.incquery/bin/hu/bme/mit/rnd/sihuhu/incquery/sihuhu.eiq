@@ -1,6 +1,111 @@
 package hu.bme.mit.rnd.sihuhu.incquery
 import "hu.bme.mit.rnd.sihuhu"
 
-pattern tracksWithName(T,name) {
+//------------------------------- // Support //-------------------------------
+
+pattern tracksWithName(T:Track,name) {
 	Track.name(T,name);
 }
+
+pattern switchConnection(R:Rail) {
+	SwitchConnection(R);
+}
+
+pattern normalRail(R1:Rail) {
+	Rail(R1);
+	neg find switchConnection(R1);
+}
+
+pattern neighborOfRail(R1:Rail, E1:TrackElement) {
+	Rail.to(R1,E1);
+} or {
+	Rail.from(R1,E1);
+}
+
+pattern possibleNeighborOfElement(E1:TrackElement, E2:TrackElement) {
+	Rail(E1);
+	find neighborOfRail(E1,E2);
+} or {
+	Switch(E1);
+	Switch.connections(E1,SC);
+	find neighborOfRail(SC,E2);
+} or {
+	Rail(E1);
+	find neighborOfRail(E1,SW);
+	Switch(SW);
+	Switch.connections(SW,E2);
+	find neighborOfRail(E2,E1);
+}
+
+pattern connectedRail(E1:TrackElement,E2:TrackElement) {
+	find possibleNeighborOfElement+(E1,E2);
+}
+
+pattern validSwitchConnection(SC:SwitchConnection, S:Switch) {
+	Switch.connections(S,SC);
+}
+
+//------------------------------- // Validate //-------------------------------
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A Switch Connection must be a part of a Switch",
+			location = SC)
+pattern invalidSwitchConnection(SC:SwitchConnection) {
+	neg find validSwitchConnection(SC,_);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A Switch must have at least one Connection",
+			location = S)
+pattern switchWithoutConnection(S:Switch) {
+	neg find validSwitchConnection(_,S);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A Switch's active Connection must belong to the same Switch",
+			location = S)
+pattern invalidActiveConnection(S:Switch, SC:SwitchConnection) {
+	Switch.activeConnection(S,SC);
+	neg find validSwitchConnection(SC,S);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "A Rail could not be connected to a Switch Connection",
+			location = R)
+pattern invalidRailConnection(R:Rail, SC:SwitchConnection) {
+	Rail.to(R,SC);
+} or {
+	Rail.from(R,SC);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "$E1.name$ is connected to $E2.name$ but not vica versa",
+			location = E1)
+pattern halfConnectedElement(E1:TrackElement,E2:TrackElement) {
+	find possibleNeighborOfElement(E1,E2);
+	neg find possibleNeighborOfElement(E2,E1);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "warning", 
+			message = "Rail $R1.name$ cannot be reached from $R2.name$",
+			location = R1)
+pattern unconnectedRail(R1:Rail,R2:Rail) {
+	Track.rails(T,R1);
+	Track.rails(T,R2);
+	neg find connectedRail(R1,R2);
+	R1!=R2;
+}
+
+//------------------------------- // Derived //--------------------------------
+
+//@QueryBasedFeature
+//pattern connectedRails(SW:Switch, R:Rail) {
+//	Switch.connections(SW,R);
+	//find neighborOfRail(SC,R);
+//}
