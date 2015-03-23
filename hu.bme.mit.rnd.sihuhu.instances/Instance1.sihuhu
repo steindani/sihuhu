@@ -49,7 +49,7 @@
       <connections name="t1scSW1" from="t1segW" to="t1segS1">
         <allowedTo name="t1signalScSW1_S"/>
         <allowedFrom name="t1signalScSW1_W"/>
-      </connections>        
+      </connections>
       <connections name="t1scSW2" from="t1segW" to="t1segS2">
         <allowedTo name="t1signalScSW2_S"/>
         <allowedFrom name="t1signalScSW2_W"/>
@@ -67,5 +67,5 @@
     </switches>
   </tracks>
   <trains name="train1" nextElement="t1swNE" onTracks="t1segN2"/>
-  <trains name="train2" nextElement="t1scSW1" onTracks="t1segS1"/>
+  <trains name="train2" nextElement="t1swSW" onTracks="t1segS1"/>
 </hu.bme.mit.rnd:World>

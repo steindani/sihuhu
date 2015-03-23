@@ -3,10 +3,6 @@ import "hu.bme.mit.rnd.sihuhu"
 
 //------------------------------- // Support //-------------------------------
 
-pattern tracksWithName(T:Track,name) {
-	Track.name(T,name);
-}
-
 pattern switchConnection(R:Rail) {
 	SwitchConnection(R);
 }
@@ -14,6 +10,10 @@ pattern switchConnection(R:Rail) {
 pattern normalRail(R1:Rail) {
 	Rail(R1);
 	neg find switchConnection(R1);
+}
+
+pattern hasTrain(R:Rail,T:Train) {
+	Rail.train(R,T);
 }
 
 pattern neighborOfRail(R1:Rail, E1:TrackElement) {
@@ -37,12 +37,61 @@ pattern possibleNeighborOfElement(E1:TrackElement, E2:TrackElement) {
 	find neighborOfRail(E2,E1);
 }
 
+pattern realToNeighbor(R:Rail, R1:Rail){
+	Rail.to(R,R1);
+} or {
+	Rail.to(R,SW);
+	Switch(SW);
+	Switch.activeConnection(SW,R1);
+	find neighborOfRail(R1,R);
+}
+
+pattern realFromNeighbor(R:Rail, R1:Rail){
+	Rail.from(R,R1);
+} or {
+	Rail.from(R,SW);
+	Switch(SW);
+	Switch.activeConnection(SW,R1);
+	find neighborOfRail(R1,R);
+}
+
+pattern realNeighbor(R:Rail, R1:Rail) {
+	find realFromNeighbor(R,R1);
+} or {
+	find realToNeighbor(R,R1);
+}
+
 pattern connectedRail(E1:TrackElement,E2:TrackElement) {
 	find possibleNeighborOfElement+(E1,E2);
 }
 
 pattern validSwitchConnection(SC:SwitchConnection, S:Switch) {
 	Switch.connections(S,SC);
+}
+
+pattern trainEnd(T:Train, R1:Rail) {
+	find hasTrain(R,T);
+	find realNeighbor(R,R1);
+	neg find hasTrain(R1,T);
+}
+
+pattern hasTrainNeighbor(SW:Switch, T:Train){
+	find connectedRails(SW, R);
+	find hasTrain(R, T);
+}
+
+pattern activeSwitchConnection(S:Switch, SC:SwitchConnection) {
+	Switch.activeConnection(S,SC);
+}
+
+pattern enabledSignal(Sig:Signal) {
+	Rail.allowedFrom(R,Sig);
+	find realFromNeighbor(R,R1);
+	neg find hasTrain(R1,_);
+} or {
+	Rail.allowedTo(R,Sig);
+	find realToNeighbor(R,R1);
+	neg find hasTrain(R1,_);
 }
 
 //------------------------------- // Validate //-------------------------------
@@ -73,6 +122,16 @@ pattern invalidActiveConnection(S:Switch, SC:SwitchConnection) {
 }
 
 @Constraint(targetEditorId = "*", 
+			severity = "warning", 
+			message = "There is a train ($T.name$) in an inactive Switch Connection!",
+			location = S)
+pattern invalidSwitchState(S:Switch, T:Train) {
+	Switch.connections(S, SC);
+	neg find activeSwitchConnection(S, SC);
+	find hasTrain(SC,T);
+}
+
+@Constraint(targetEditorId = "*", 
 			severity = "error", 
 			message = "A Rail could not be connected to a Switch Connection",
 			location = R)
@@ -80,6 +139,16 @@ pattern invalidRailConnection(R:Rail, SC:SwitchConnection) {
 	Rail.to(R,SC);
 } or {
 	Rail.from(R,SC);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "warning", 
+			message = "Rail $R.name$ is connected to $E.name$ with both ends",
+			location = R)
+pattern doubleRailConnection(R:Rail, E:TrackElement
+) {
+	Rail.to(R,E);
+	Rail.from(R,E);
 }
 
 @Constraint(targetEditorId = "*", 
@@ -102,10 +171,69 @@ pattern unconnectedRail(R1:Rail,R2:Rail) {
 	R1!=R2;
 }
 
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "Train $T.name$ should be continuous",
+			location = T)
+pattern incorrectTrain(T:Train) {
+	M == count find trainEnd(T,_);
+	check (M > 2);
+}
+
+
+
+@Constraint(targetEditorId = "*", 
+			severity = "error", 
+			message = "Train $T.name$ should not have a Switch Connection as Next Element",
+			location = T)
+pattern incorrectSCNextElement(T:Train) {
+	Train.nextElement(T,E);
+	SwitchConnection(E);
+}
+
+@Constraint(targetEditorId = "*", 
+			severity = "warning", 
+			message = "Train $T.name$ can't have $E.name$ as Next Element",
+			location = T)
+pattern incorrectNextElement(T:Train, E:TrackElement) {
+	Train.nextElement(T,E);
+	find normalRail(E);
+	neg find trainEnd(T,E);
+} or {
+	Train.nextElement(T,E);
+	Switch(E);
+	find hasTrain(SC,T);
+	Switch.connections(E,SC);
+} or {
+	Train.nextElement(T,E);
+	Switch(E);
+	Switch.connections(E,SC);
+	neg find hasTrain(SC,T);
+	neg find hasTrainNeighbor(E,T);
+}
+
 //------------------------------- // Derived //--------------------------------
 
-//@QueryBasedFeature
-//pattern connectedRails(SW:Switch, R:Rail) {
-//	Switch.connections(SW,R);
-	//find neighborOfRail(SC,R);
-//}
+@QueryBasedFeature
+pattern nextRail(S:Signal, R:Rail) {
+	Rail.allowedTo(R1,S);
+	find realToNeighbor(R1,R);
+} or {
+	Rail.allowedFrom(R1,S);
+	find realFromNeighbor(R1,R);
+}
+
+@QueryBasedFeature
+pattern enabled(Sig:Signal, B) {
+	find enabledSignal(Sig);
+	B == true;
+} or {
+	neg find enabledSignal(Sig);
+	B == false;	
+}
+
+@QueryBasedFeature
+pattern connectedRails(SW:Switch, R:Rail) {
+	Switch.connections(SW,SC);
+	find neighborOfRail(SC,R);
+}
