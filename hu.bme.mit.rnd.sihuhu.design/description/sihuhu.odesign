@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="sihuhu" version="8.1.0">
+  <ownedViewpoints name="world" label="Sihuhu World Viewpoint" modelFileExtension="sihuhu">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="World diagram" domainClass="sihuhu.World">
+      <defaultLayer name="Default">
+        <containerMappings name="worldContainer" label="World" semanticCandidatesExpression="[self/]" domainClass="sihuhu.World" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']">
+          <subNodeMappings name="Train" semanticCandidatesExpression="[self.trains/]" domainClass="sihuhu.Train">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelFormat="bold" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="5" workspacePath="/sihuhu.design/images/train.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" labelFormat="bold" showIcon="false" tooltipExpression="[name/]" roundedCorner="true" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.0"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateRail" label="Add Rail" nodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Rail" referenceName="rails" variableName="rail">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['R'+container.rails->size()/]"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:rail">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Signal" referenceName="allowedFrom" variableName="fromSignal">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="[rail.name + '_from'/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Signal" referenceName="allowedTo" variableName="toSignal">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="[rail.name + '_to'/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Connect" label="Connect Rails" edgeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='SC%20From']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="AdvancedConnectRails" id="sihuhu.design.connectRails">
+                <parameters name="source" value="var:source"/>
+                <parameters name="target" value="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteRail" label="Delete Rail">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateSwitch" label="Add Switch" containerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subContainerMappings[name='SwitchContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Switch" referenceName="switches" variableName="switch">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['SW' + switch.eContainer().oclAsType(Track).switches -> size()/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AddSwitchConnection" label="Add Switch Connection" nodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subContainerMappings[name='SwitchContainer']/@subNodeMappings[name='SwitchConnection']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.SwitchConnection" referenceName="connections" variableName="connection">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['C'+container.connections->size()/]"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:connection">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Signal" referenceName="allowedFrom" variableName="fromSignal">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="[connection.name + '_from'/]"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Signal" referenceName="allowedTo" variableName="toSignal">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="[connection.name + '_to'/]"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Add Track" containerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Track" referenceName="tracks" variableName="track">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['T' + self.eContainer().oclAsType(World).tracks -> size()/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Add Train" nodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="sihuhu.Train" referenceName="trains" variableName="train">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['Train' + thisEObject.eContainer().oclAsType(World).trains -> size()/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="DisplayLayer">
+        <edgeMappings name="RailEdge" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']" targetFinderExpression="[allowedTo/]" sourceFinderExpression="[allowedFrom/]" domainClass="sihuhu.Rail" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="4" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="6" labelFormat="bold" showIcon="false" labelExpression="[name/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="[thisEObject.train &lt;> null/]">
+            <style sizeComputationExpression="5" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="NeighborSignalEdge" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']" targetFinderExpression="[self.to.oclAsType(Rail).allowedFrom/]" sourceFinderExpression="[self.allowedTo/]" domainClass="sihuhu.Rail" useDomainElement="true">
+          <style lineStyle="dot" sourceArrow="OutputArrow" targetArrow="OutputArrow" sizeComputationExpression="1" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SwitchCases of Switch" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='SwitchNode']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']" targetFinderExpression="[thisEObject.connections.allowedFrom->union(thisEObject.connections.allowedTo)/]">
+          <style sourceArrow="OutputArrow" targetArrow="OutputArrow" sizeComputationExpression="2" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Possible Switch Connection From" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']" targetFinderExpression="[thisEObject.allowedFrom/]" sourceFinderExpression="[thisEObject.from.oclAsType(Rail).allowedTo/]" domainClass="sihuhu.SwitchConnection" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="TrainOnRail" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']" targetFinderExpression="[thisEObject.onTracks/]" sourceFinderExpression="[thisEObject/]" domainClass="sihuhu.Train" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="1" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="DisplayWorld" semanticCandidatesExpression="[self/]" domainClass="sihuhu.World" reusedNodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']" importedMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']">
+          <subContainerMappings name="DisplayTrack" semanticCandidatesExpression="[self.tracks/]" domainClass="sihuhu.Track" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']">
+            <subNodeMappings name="Rail From Signal" semanticCandidatesExpression="[rails.allowedFrom->union(switches.connections.allowedFrom)/]" domainClass="sihuhu.Signal">
+              <style xsi:type="style:DotDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Rail To Signal" semanticCandidatesExpression="[rails.allowedTo->union(switches.connections.allowedTo)/]" domainClass="sihuhu.Signal">
+              <style xsi:type="style:DotDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="SwitchNode" semanticCandidatesExpression="[thisEObject.switches/]" domainClass="sihuhu.Switch">
+              <style xsi:type="style:EllipseNodeDescription" labelSize="10" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(thisEObject.connections -> size() + 1 ) * 3/]" verticalDiameterComputationExpression="[(thisEObject.connections -> size() + 1 ) * 3/]">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" labelFormat="bold" showIcon="false" labelAlignment="LEFT" tooltipExpression="[name/]" backgroundStyle="GradientTopToBottom">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+        </containerMappings>
+      </additionalLayers>
+      <additionalLayers name="EditorLayer">
+        <edgeMappings name="Rail To Connection" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subContainerMappings[name='SwitchContainer']/@subNodeMappings[name='SwitchConnection']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subContainerMappings[name='SwitchContainer']/@subNodeMappings[name='SwitchConnection']" targetFinderExpression="[to/]">
+          <style sizeComputationExpression="2" endsCentering="Both">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Rail From Connection" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']" targetFinderExpression="[from/]">
+          <style sizeComputationExpression="2" endsCentering="Target">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SC From" sourceMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subContainerMappings[name='SwitchContainer']/@subNodeMappings[name='SwitchConnection']" targetMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']" targetFinderExpression="[thisEObject.from/]">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="EditorWorld" semanticCandidatesExpression="[self/]" domainClass="sihuhu.World" reusedNodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']" importedMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']">
+          <subContainerMappings name="EditorTrack" semanticCandidatesExpression="[self.tracks/]" domainClass="sihuhu.Track">
+            <subNodeMappings name="Rail" label="Rail" deletionDescription="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteRail']" semanticCandidatesExpression="[rails/]" domainClass="sihuhu.Rail">
+              <style xsi:type="style:SquareDescription" labelFormat="bold" showIcon="false" tooltipExpression="[name/]" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subContainerMappings name="SwitchContainer" semanticCandidatesExpression="[switches/]" domainClass="sihuhu.Switch">
+              <subNodeMappings name="SwitchConnection" semanticCandidatesExpression="[self.connections/]" domainClass="sihuhu.SwitchConnection">
+                <style xsi:type="style:BundledImageDescription" showIcon="false" labelAlignment="RIGHT" resizeKind="NSEW" shape="ring">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" showIcon="false">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" labelFormat="bold" showIcon="false" labelAlignment="LEFT" tooltipExpression="[name/]" backgroundStyle="GradientTopToBottom">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subContainerMappings>
+        </containerMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
