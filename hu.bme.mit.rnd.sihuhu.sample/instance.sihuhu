@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" name="Modellvilág">
+  <tracks name="Modellpálya">
+    <rails name="R1" from="C2" to="R2">
+      <train href="My.sihuhu#Train1"/>
+      <allowedTo name="R1_to_R2"/>
+      <allowedFrom name="R1_from_C2"/>
+    </rails>
+    <rails name="R2" from="R1">
+      <train href="My.sihuhu#Train1"/>
+      <allowedTo name="R2_to_R3"/>
+      <allowedFrom name="R2_from_R1"/>
+    </rails>
+    <switches name="S1">
+      <connections name="C2" to="C2">
+        <allowedTo name="C2_to_C2"/>
+        <allowedFrom name="C2_from_R3"/>
+      </connections>
+      <connections name="C2" from="C2" to="R1">
+        <allowedTo name="C2_to_R1"/>
+        <allowedFrom name="C2_from_C2"/>
+      </connections>
+    </switches>
+  </tracks>
+  <trains name="HuHu"/>
+</hu.bme.mit.rnd:World>

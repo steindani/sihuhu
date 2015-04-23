@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" name="Modellvilág">
+  <tracks name="Modellvasút">
+    <rails name="R2" to="R3">
+      <train href="My.sihuhu#Train1"/>
+      <allowedTo name="R2_to_R3"/>
+      <allowedFrom name="R2_from_R1"/>
+    </rails>
+    <rails name="R3" train="HuHu" from="R2">
+      <allowedTo name="R3_to_C3"/>
+      <allowedFrom name="R3_to"/>
+    </rails>
+    <rails name="R4">
+      <allowedTo name="R4_to_C1"/>
+      <allowedFrom name="R4_from"/>
+    </rails>
+    <rails name="R6">
+      <allowedTo name="R6_to_C2"/>
+      <allowedFrom name="R6_from"/>
+    </rails>
+    <rails name="R7">
+      <allowedTo name="R7_to_C3"/>
+      <allowedFrom name="R7_from"/>
+    </rails>
+    <rails name="R6" from="SW B" to="R7">
+      <allowedTo name="R6_to_R7"/>
+      <allowedFrom name="R6_from_C1"/>
+    </rails>
+    <rails name="R7" from="R6">
+      <allowedTo name="R7_to"/>
+      <allowedFrom name="R7_from_R6"/>
+    </rails>
+    <switches name="SW A">
+      <connections name="C1" from="R3" to="R4">
+        <allowedTo name="C1_to"/>
+        <allowedFrom name="C1_from_R3"/>
+      </connections>
+      <connections name="C2" from="R3" to="R6">
+        <allowedTo name="C2_to"/>
+        <allowedFrom name="C2_from"/>
+      </connections>
+      <connections name="C3" from="R3" to="R7">
+        <allowedTo name="C3_to_R7"/>
+        <allowedFrom name="C3_from_R3"/>
+      </connections>
+    </switches>
+    <switches name="SW B">
+      <connections name="C1" from="R4" to="R6">
+        <allowedTo name="C1_to_R6"/>
+        <allowedFrom name="C1_from_R4"/>
+      </connections>
+      <connections name="C2" from="R6" to="R6">
+        <allowedTo name="C2_to_R6"/>
+        <allowedFrom name="C2_from_R6"/>
+      </connections>
+      <connections name="C3" from="R7" to="R6">
+        <allowedTo name="C3_to_R6"/>
+        <allowedFrom name="C3_from_R7"/>
+      </connections>
+    </switches>
+  </tracks>
+  <trains name="HuHu" onTracks="R3"/>
+</hu.bme.mit.rnd:World>
