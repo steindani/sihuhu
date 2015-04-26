@@ -1,0 +1,62 @@
+System s {
+ Event trainIn1;
+ Event trainOut1;
+ Event railOccupied1;
+ Event railFree1;
+ 
+ Event trainIn2;
+ Event trainOut2;
+ Event railOccupied2;
+ Event railFree2;
+ 
+ Event trainIn3;
+ Event trainOut3;
+ Event railOccupied3;
+ Event railFree3;
+ 
+ Component rail1 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainIn1 generates railOccupied1;
+  Transition trainGoesOut: occupied -> free on trainOut1 generates railFree1;
+ }
+ 
+ Component rail2 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainIn2 generates railOccupied2;
+  Transition trainGoesOut: occupied -> free on trainOut2 generates railFree2;
+ }
+ 
+ Component rail3 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainIn3 generates railOccupied3;
+  Transition trainGoesOut: occupied -> free on trainOut3 generates railFree3;
+ }
+ 
+ /*Component switch {
+  State connection1alive;
+  State connection2alive;
+  State off;
+  *off
+  
+  Transition switchToConnection: 
+ }*/
+ 
+ Component signal2to1 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupied1;
+  Transition goesGreen: red -> green on railFree1;
+ }
+ 
+}
