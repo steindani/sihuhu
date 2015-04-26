@@ -1,0 +1,494 @@
+System s {
+ Event trainInN1;
+ Event trainOutN1;
+ Event railOccupiedN1;
+ Event railFreeN1;
+ 
+ Event trainInN2;
+ Event trainOutN2;
+ Event railOccupiedN2;
+ Event railFreeN2;
+ 
+ Event trainInW;
+ Event trainOutW;
+ Event railOccupiedW;
+ Event railFreeW;
+ 
+ Event trainInS1;
+ Event trainOutS1;
+ Event railOccupiedS1;
+ Event railFreeS1;
+ 
+ Event trainInS2;
+ Event trainOutS2;
+ Event railOccupiedS2;
+ Event railFreeS2;
+ 
+ Event trainInE;
+ Event trainOutE;
+ Event railOccupiedE;
+ Event railFreeE;
+ 
+ Event trainInNW;
+ Event trainOutNW;
+ Event railOccupiedNW1;
+ Event railFreeNW1; 
+ Event railOccupiedNW2;
+ Event railFreeNW2;
+ 
+ Event trainInNE;
+ Event trainOutNE;
+ Event railOccupiedNE1;
+ Event railFreeNE1;
+ Event railOccupiedNE2;
+ Event railFreeNE2;  
+ 
+ Event trainInSW;
+ Event trainOutSW;
+ Event railOccupiedSW1;
+ Event railFreeSW1; 
+ Event railOccupiedSW2;
+ Event railFreeSW2; 
+ 
+ Event trainInSE;
+ Event trainOutSE;
+ Event railOccupiedSE1;
+ Event railFreeSE1;
+ Event railOccupiedSE2;
+ Event railFreeSE2;
+ 
+ Event switchNW1;
+ Event switchNW2;
+ Event switchNWoff;
+ 
+ Event switchNE1;
+ Event switchNE2;
+ Event switchNEoff;
+ 
+ Event switchSW1;
+ Event switchSW2;
+ Event switchSWoff;
+ 
+ Event switchSE1;
+ Event switchSE2;
+ Event switchSEoff;
+ 
+ Component railN1 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInN1 generates railOccupiedN1;
+  Transition trainGoesOut: occupied -> free on trainOutN1 generates railFreeN1;
+ }
+ 
+ Component railN2 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInN2 generates railOccupiedN2;
+  Transition trainGoesOut: occupied -> free on trainOutN2 generates railFreeN2;
+ }
+ 
+ Component railW {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInW generates railOccupiedW;
+  Transition trainGoesOut: occupied -> free on trainOutW generates railFreeW;
+ }
+ 
+ Component railS1 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInS1 generates railOccupiedS1;
+  Transition trainGoesOut: occupied -> free on trainOutS1 generates railFreeS1;
+ }
+ 
+ Component railS2 {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInS2 generates railOccupiedS2;
+  Transition trainGoesOut: occupied -> free on trainOutS2 generates railFreeS2;
+ }
+ 
+ Component railE {
+  State free;
+  State occupied;
+  *free
+  
+  Transition trainComesIn: free -> occupied on trainInE generates railOccupiedE;
+  Transition trainGoesOut: occupied -> free on trainOutE generates railFreeE;
+ }
+ 
+ Component railScNW1 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInNW generates railOccupiedNW1;
+  Transition trainGoesOut: occupied -> free on trainOutNW generates railFreeNW1;
+  Transition switchTo0: free -> nonexistent on switchNWoff;
+  Transition switchTo1: nonexistent -> free on switchNW1;
+  Transition switchTo2: free -> nonexistent on switchNW2;
+ }
+ 
+ Component railScNW2 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInNW generates railOccupiedNW2;
+  Transition trainGoesOut: occupied -> free on trainOutNW generates railFreeNW2;
+  Transition switchTo0: free -> nonexistent on switchNWoff;
+  Transition switchTo1: free -> nonexistent on switchNW1;
+  Transition switchTo2: nonexistent -> free on switchNW2; 
+ }
+ 
+ Component railScNE1 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInNE generates railOccupiedNE1;
+  Transition trainGoesOut: occupied -> free on trainOutNE generates railFreeNE1;
+  Transition switchTo0: free -> nonexistent on switchNEoff;
+  Transition switchTo1: nonexistent -> free on switchNE1;
+  Transition switchTo2: free -> nonexistent on switchNE2;
+ }
+ 
+ Component railScNE2 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInNE generates railOccupiedNE2;
+  Transition trainGoesOut: occupied -> free on trainOutNE generates railFreeNE2;
+  Transition switchTo0: free -> nonexistent on switchNEoff;
+  Transition switchTo1: free -> nonexistent on switchNE1;
+  Transition switchTo2: nonexistent -> free on switchNE2; 
+ }
+ 
+ Component railScSW1 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInSW generates railOccupiedSW1;
+  Transition trainGoesOut: occupied -> free on trainOutSW generates railFreeSW1;
+  Transition switchTo0: free -> nonexistent on switchSWoff;
+  Transition switchTo1: nonexistent -> free on switchSW1;
+  Transition switchTo2: free -> nonexistent on switchSW2;
+ }
+ 
+ Component railScSW2 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInSW generates railOccupiedSW2;
+  Transition trainGoesOut: occupied -> free on trainOutSW generates railFreeSW2;
+  Transition switchTo0: free -> nonexistent on switchSWoff;
+  Transition switchTo1: free -> nonexistent on switchSW1;
+  Transition switchTo2: nonexistent -> free on switchSW2; 
+ }
+  
+ Component railScSE1 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInSE generates railOccupiedSE1;
+  Transition trainGoesOut: occupied -> free on trainOutSE generates railFreeSE1;
+  Transition switchTo0: free -> nonexistent on switchSEoff;
+  Transition switchTo1: nonexistent -> free on switchSE1;
+  Transition switchTo2: free -> nonexistent on switchSE2;
+ }
+ 
+ Component railScSE2 {
+  State free;
+  State occupied;
+  State nonexistent;
+  *nonexistent
+  
+  Transition trainComesIn: free -> occupied on trainInSE generates railOccupiedSE2;
+  Transition trainGoesOut: occupied -> free on trainOutSE generates railFreeSE2;
+  Transition switchTo0: free -> nonexistent on switchSEoff;
+  Transition switchTo1: free -> nonexistent on switchSE1;
+  Transition switchTo2: nonexistent -> free on switchSE2; 
+ }
+ 
+ Component signalEtoNE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNEoff;   
+  Transition goesRed1: green -> red on railOccupiedNE1;
+  Transition goesRed2: green -> red on railOccupiedNE2;  
+  Transition goesGreen0: red -> green on railFreeNE1;
+  Transition goesGreen1: red -> green on railFreeNE2;  
+  Transition goesGreen2: red -> green on switchNE1;
+  Transition goesGreen3: red -> green on switchNE2;  
+ }
+ 
+ Component signalEtoSE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSEoff;
+  Transition goesRed1: green -> red on railOccupiedSE1;
+  Transition goesRed2: green -> red on railOccupiedSE2;
+  Transition goesGreen0: red -> green on railFreeSE1;
+  Transition goesGreen1: red -> green on railFreeSE2;
+  Transition goesGreen2: red -> green on switchSE1;
+  Transition goesGreen3: red -> green on switchSE2;  
+ }
+ 
+  Component signalWtoNW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNWoff;   
+  Transition goesRed1: green -> red on railOccupiedNW1;
+  Transition goesRed2: green -> red on railOccupiedNW2;  
+  Transition goesGreen0: red -> green on railFreeNW1;
+  Transition goesGreen1: red -> green on railFreeNW2;  
+  Transition goesGreen2: red -> green on switchNW1;
+  Transition goesGreen3: red -> green on switchNW2;  
+ }
+ 
+ Component signalWtoSW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSWoff;
+  Transition goesRed1: green -> red on railOccupiedSW1;
+  Transition goesRed2: green -> red on railOccupiedSW2;
+  Transition goesGreen0: red -> green on railFreeSW1;
+  Transition goesGreen1: red -> green on railFreeSW2;
+  Transition goesGreen2: red -> green on switchSW1;
+  Transition goesGreen3: red -> green on switchSW2;  
+ }
+ 
+ Component signalN1toNE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNEoff;
+  Transition goesRed1: green -> red on switchNE2;
+  Transition goesRed2: green -> red on railOccupiedNE1; 
+  Transition goesGreen0: red -> green on railFreeNE1;
+  Transition goesGreen1: red -> green on switchNE1;  
+ }
+ 
+ Component signalN1toNW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNWoff;
+  Transition goesRed1: green -> red on switchNW2;
+  Transition goesRed2: green -> red on railOccupiedNW1; 
+  Transition goesGreen0: red -> green on railFreeNW1;
+  Transition goesGreen1: red -> green on switchNW1;  
+ }
+ 
+ Component signalN2toNE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNEoff;
+  Transition goesRed1: green -> red on switchNE1;
+  Transition goesRed2: green -> red on railOccupiedNE2; 
+  Transition goesGreen0: red -> green on railFreeNE2;
+  Transition goesGreen1: red -> green on switchNE2;  
+ }
+ 
+ Component signalN2toNW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchNWoff;
+  Transition goesRed1: green -> red on switchNW1;
+  Transition goesRed2: green -> red on railOccupiedNW2; 
+  Transition goesGreen0: red -> green on railFreeNW2;
+  Transition goesGreen1: red -> green on switchNW2;  
+ }
+ 
+ Component signalS1toSE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSEoff;
+  Transition goesRed1: green -> red on switchSE2;
+  Transition goesRed2: green -> red on railOccupiedSE1; 
+  Transition goesGreen0: red -> green on railFreeSE1;
+  Transition goesGreen1: red -> green on switchSE1;  
+ }
+ 
+ Component signalS1toSW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSWoff;
+  Transition goesRed1: green -> red on switchSW2;
+  Transition goesRed2: green -> red on railOccupiedSW1; 
+  Transition goesGreen0: red -> green on railFreeSW1;
+  Transition goesGreen1: red -> green on switchSW1;  
+ }
+ 
+ Component signalS2toSE {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSEoff;
+  Transition goesRed1: green -> red on switchSE1;
+  Transition goesRed2: green -> red on railOccupiedSE2; 
+  Transition goesGreen0: red -> green on railFreeSE2;
+  Transition goesGreen1: red -> green on switchSE2;  
+ }
+ 
+ Component signalS2toSW {
+  State green;
+  State red;
+  *red
+  
+  Transition goesRed0: green -> red on switchSWoff;
+  Transition goesRed1: green -> red on switchSW1;
+  Transition goesRed2: green -> red on railOccupiedSW2; 
+  Transition goesGreen0: red -> green on railFreeSW2;
+  Transition goesGreen1: red -> green on switchSW2;  
+ }
+ 
+  Component signalNEtoN1 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedN1;
+  Transition goesGreen: red -> green on railFreeN1;
+ }
+ 
+ Component signalNEtoN2 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedN2;
+  Transition goesGreen: red -> green on railFreeN2;
+ }
+ 
+ Component signalNEtoE {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedE;
+  Transition goesGreen: red -> green on railFreeE;
+ } 
+ 
+ Component signalSEtoS1 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedS1;
+  Transition goesGreen: red -> green on railFreeS1;
+ }
+ 
+ Component signalSEtoS2 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedS2;
+  Transition goesGreen: red -> green on railFreeS2;
+ }
+ 
+ Component signalSEtoE {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedE;
+  Transition goesGreen: red -> green on railFreeE;
+ }
+ 
+ Component signalNWtoN1 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedN1;
+  Transition goesGreen: red -> green on railFreeN1;
+ }
+ 
+ Component signalNWtoN2 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedN2;
+  Transition goesGreen: red -> green on railFreeN2;
+ }
+ 
+ Component signalNWtoW {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedW;
+  Transition goesGreen: red -> green on railFreeW;
+ } 
+ 
+ Component signalSWtoS1 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedS1;
+  Transition goesGreen: red -> green on railFreeS1;
+ }
+ 
+ Component signalSWtoS2 {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedS2;
+  Transition goesGreen: red -> green on railFreeS2;
+ }
+ 
+ Component signalSWtoW {
+  State green;
+  State red;
+  *green
+  
+  Transition goesRed: green -> red on railOccupiedW;
+  Transition goesGreen: red -> green on railFreeW;
+ }   
+ 
+}
