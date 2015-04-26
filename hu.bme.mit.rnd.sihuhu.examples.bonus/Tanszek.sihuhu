@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" name="FTSRG csillámvasút">
+  <tracks name="T1">
+    <rails name="R1" to="SW1">
+      <allowedTo name="R1t"/>
+      <allowedFrom name="R1f"/>
+    </rails>
+    <rails name="R2" from="SW1" to="SW2">
+      <allowedTo name="R2t"/>
+      <allowedFrom name="R2f"/>
+    </rails>
+    <rails name="R3" from="SW2" to="SW3">
+      <allowedTo name="R3t"/>
+      <allowedFrom name="R3f"/>
+    </rails>
+    <rails name="R4" from="SW3" to="R6">
+      <allowedTo name="R4t"/>
+      <allowedFrom name="R4f"/>
+    </rails>
+    <rails name="R5" from="SW3" to="R7">
+      <allowedTo name="R5t"/>
+      <allowedFrom name="R5f"/>
+    </rails>
+    <rails name="R6" train="Train2" from="R4" to="SW4">
+      <allowedTo name="R6t"/>
+      <allowedFrom name="R6f"/>
+    </rails>
+    <rails name="R7" from="R5" to="SW4">
+      <allowedTo name="R7t"/>
+      <allowedFrom name="R7f"/>
+    </rails>
+    <rails name="R8" from="SW4" to="R9">
+      <allowedTo name="R8t"/>
+      <allowedFrom name="R8f"/>
+    </rails>
+    <rails name="R9" from="R8" to="SW1">
+      <allowedTo name="R9t"/>
+      <allowedFrom name="R9f"/>
+    </rails>
+    <rails name="R10" from="SW2" to="SW5">
+      <allowedTo name="R10t"/>
+      <allowedFrom name="R10f"/>
+    </rails>
+    <rails name="R11" from="SW5" to="R12">
+      <allowedTo name="R11t"/>
+      <allowedFrom name="R11f"/>
+    </rails>
+    <rails name="R12" from="R11" to="SW6">
+      <allowedTo name="R12t"/>
+      <allowedFrom name="R12f"/>
+    </rails>
+    <rails name="R13" from="SW6" to="SW2">
+      <allowedTo name="R13t"/>
+      <allowedFrom name="R13f"/>
+    </rails>
+    <rails name="R14" from="SW5" to="R15">
+      <allowedTo name="R14t"/>
+      <allowedFrom name="R14f"/>
+    </rails>
+    <rails name="R15" from="R14" to="SW6">
+      <allowedTo name="R15t"/>
+      <allowedFrom name="R15f"/>
+    </rails>
+    <switches name="SW1">
+      <connections name="C1" from="R9" to="R2">
+        <allowedTo name="C1t"/>
+        <allowedFrom name="C1f"/>
+      </connections>
+      <connections name="C2" from="R1" to="R2">
+        <allowedTo name="C2t"/>
+        <allowedFrom name="C2f"/>
+      </connections>
+    </switches>
+    <switches name="SW2">
+      <connections name="C3" train="Train1" from="R2" to="R3">
+        <allowedTo name="C3t"/>
+        <allowedFrom name="C3f"/>
+      </connections>
+      <connections name="C4" from="R2" to="R10">
+        <allowedTo name="C4t"/>
+        <allowedFrom name="C4f"/>
+      </connections>
+      <connections name="C5" from="R13" to="R3">
+        <allowedTo name="C5t"/>
+        <allowedFrom name="C5f"/>
+      </connections>
+      <connections name="C6" from="R13" to="R10">
+        <allowedTo name="C6t"/>
+        <allowedFrom name="C6f"/>
+      </connections>
+    </switches>
+    <switches name="SW3">
+      <connections name="C7" from="R3" to="R5">
+        <allowedTo name="C7t"/>
+        <allowedFrom name="C7f"/>
+      </connections>
+      <connections name="C8" from="R3" to="R4">
+        <allowedTo name="C8t"/>
+        <allowedFrom name="C8f"/>
+      </connections>
+    </switches>
+    <switches name="SW4">
+      <connections name="C9" train="Train2" from="R6" to="R8">
+        <allowedTo name="C9t"/>
+        <allowedFrom name="C9f"/>
+      </connections>
+      <connections name="C10" from="R7" to="R8">
+        <allowedTo name="C10t"/>
+        <allowedFrom name="C10f"/>
+      </connections>
+    </switches>
+    <switches name="SW5">
+      <connections name="C11" from="R10" to="R14">
+        <allowedTo name="C11t"/>
+        <allowedFrom name="C11f"/>
+      </connections>
+      <connections name="C12" from="R10" to="R11">
+        <allowedTo name="C12t"/>
+        <allowedFrom name="C12f"/>
+      </connections>
+    </switches>
+    <switches name="SW6">
+      <connections name="C13" from="R12" to="R13">
+        <allowedTo name="C13t"/>
+        <allowedFrom name="C13f"/>
+      </connections>
+      <connections name="C14" from="R12" to="R15">
+        <allowedTo name="C14t"/>
+        <allowedFrom name="C14f"/>
+      </connections>
+    </switches>
+  </tracks>
+  <trains name="Train1" nextElement="R3" onTracks="C3"/>
+  <trains name="Train2" nextElement="R4" onTracks="C9 R6"/>
+</hu.bme.mit.rnd:World>
