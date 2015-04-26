@@ -25,7 +25,7 @@
       <allowedTo name="to-rE"/>
       <allowedFrom name="from-rE"/>
     </rails>
-    <switches name="swNE">
+    <switches name="swNE" activeConnection="scNE1">
       <connections name="scNE2" from="rE" to="rN2">
         <allowedTo name="to_NE2"/>
         <allowedFrom name="from-NE2"/>
@@ -35,7 +35,7 @@
         <allowedFrom name="from-NE1"/>
       </connections>
     </switches>
-    <switches name="swNW">
+    <switches name="swNW" activeConnection="scSW1">
       <connections name="scNW1" from="rN1" to="rW">
         <allowedTo name="to-NW1"/>
         <allowedFrom name="from-NW1"/>
@@ -45,7 +45,7 @@
         <allowedFrom name="from-NW2"/>
       </connections>
     </switches>
-    <switches name="swSW">
+    <switches name="swSW" activeConnection="scSW1">
       <connections name="scSW2" from="rW" to="rS2">
         <allowedTo name="to-SW2"/>
         <allowedFrom name="from-SW2"/>
@@ -55,7 +55,7 @@
         <allowedFrom name="from-SW1"/>
       </connections>
     </switches>
-    <switches name="swSE">
+    <switches name="swSE" activeConnection="scSE2">
       <connections name="scSE1" from="rS1" to="rE">
         <allowedTo name="to-SE1"/>
         <allowedFrom name="from-SE1"/>
