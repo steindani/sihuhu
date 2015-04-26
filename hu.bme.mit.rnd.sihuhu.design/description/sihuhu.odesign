@@ -5,7 +5,7 @@
       <defaultLayer name="Default">
         <containerMappings name="worldContainer" label="World" semanticCandidatesExpression="[self/]" domainClass="sihuhu.World" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']">
           <subNodeMappings name="Train" semanticCandidatesExpression="[self.trains/]" domainClass="sihuhu.Train">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelFormat="bold" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="5" workspacePath="/sihuhu.design/images/train.png">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelFormat="bold" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="5" workspacePath="/hu.bme.mit.rnd.sihuhu.design/images/train.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
