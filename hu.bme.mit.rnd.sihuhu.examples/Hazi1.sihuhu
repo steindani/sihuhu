@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" name="My Little Sunny World">
+  <tracks name="T1">
+    <rails name="rN1" from="swNE" to="swNW">
+      <allowedTo name="to-rN1"/>
+      <allowedFrom name="from-rN1"/>
+    </rails>
+    <rails name="rN2" train="Train1" from="swNE" to="swNW">
+      <allowedTo name="to-rN2"/>
+      <allowedFrom name="from-rN2"/>
+    </rails>
+    <rails name="rW" from="swNW" to="swSW">
+      <allowedTo name="to-rW"/>
+      <allowedFrom name="from-rW"/>
+    </rails>
+    <rails name="rS1" train="Train2" from="swSW" to="swSE">
+      <allowedTo name="to-rS1"/>
+      <allowedFrom name="from-rS1"/>
+    </rails>
+    <rails name="rS2" from="swSW" to="swSE">
+      <allowedTo name="to_rS2"/>
+      <allowedFrom name="from-rS2"/>
+    </rails>
+    <rails name="rE" from="swSE" to="swNE">
+      <allowedTo name="to-rE"/>
+      <allowedFrom name="from-rE"/>
+    </rails>
+    <switches name="swNE">
+      <connections name="scNE2" from="rE" to="rN2">
+        <allowedTo name="to_NE2"/>
+        <allowedFrom name="from-NE2"/>
+      </connections>
+      <connections name="scNE1" from="rE" to="rN1">
+        <allowedTo name="to-NE1"/>
+        <allowedFrom name="from-NE1"/>
+      </connections>
+    </switches>
+    <switches name="swNW">
+      <connections name="scNW1" from="rN1" to="rW">
+        <allowedTo name="to-NW1"/>
+        <allowedFrom name="from-NW1"/>
+      </connections>
+      <connections name="scNW2" from="rN2" to="rW">
+        <allowedTo name="to-NW2"/>
+        <allowedFrom name="from-NW2"/>
+      </connections>
+    </switches>
+    <switches name="swSW">
+      <connections name="scSW2" from="rW" to="rS2">
+        <allowedTo name="to-SW2"/>
+        <allowedFrom name="from-SW2"/>
+      </connections>
+      <connections name="scSW1" from="rW" to="rS1">
+        <allowedTo name="to-SW1"/>
+        <allowedFrom name="from-SW1"/>
+      </connections>
+    </switches>
+    <switches name="swSE">
+      <connections name="scSE1" from="rS1" to="rE">
+        <allowedTo name="to-SE1"/>
+        <allowedFrom name="from-SE1"/>
+      </connections>
+      <connections name="scSE2" from="rS2" to="rE">
+        <allowedTo name="to-SE2"/>
+        <allowedFrom name="from-SE2"/>
+      </connections>
+    </switches>
+  </tracks>
+  <trains name="Train1" nextElement="swNE" onTracks="rN2"/>
+  <trains name="Train2" nextElement="swSW" onTracks="rS1"/>
+</hu.bme.mit.rnd:World>
