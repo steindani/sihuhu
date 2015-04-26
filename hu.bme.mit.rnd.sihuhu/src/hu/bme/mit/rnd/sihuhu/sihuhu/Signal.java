@@ -32,6 +32,7 @@ public interface Signal extends NamedElement {
 	 * @return the value of the '<em>Next Rail</em>' reference.
 	 * @see hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuPackage#getSignal_NextRail()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="org.eclipse.incquery.querybasedfeature patternFQN='hu.bme.mit.rnd.sihuhu.incquery.nextRail'"
 	 * @generated
 	 */
 	Rail getNextRail();
@@ -47,6 +48,7 @@ public interface Signal extends NamedElement {
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuPackage#getSignal_Enabled()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="org.eclipse.incquery.querybasedfeature patternFQN='hu.bme.mit.rnd.sihuhu.incquery.enabled'"
 	 * @generated
 	 */
 	boolean isEnabled();

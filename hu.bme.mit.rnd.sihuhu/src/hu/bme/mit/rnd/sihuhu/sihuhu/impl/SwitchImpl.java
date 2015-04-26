@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -47,6 +48,16 @@ public class SwitchImpl extends TrackElementImpl implements Switch {
 	 * @ordered
 	 */
 	protected EList<SwitchConnection> connections;
+
+	/**
+	 * The cached setting delegate for the '{@link #getConnectedRails() <em>Connected Rails</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnectedRails()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate CONNECTED_RAILS__ESETTING_DELEGATE = ((EStructuralFeature.Internal)SihuhuPackage.Literals.SWITCH__CONNECTED_RAILS).getSettingDelegate();
 
 	/**
 	 * The cached value of the '{@link #getActiveConnection() <em>Active Connection</em>}' reference.
@@ -94,12 +105,9 @@ public class SwitchImpl extends TrackElementImpl implements Switch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Rail> getConnectedRails() {
-		// TODO: implement this method to return the 'Connected Rails' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		return (EList<Rail>)CONNECTED_RAILS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -222,7 +230,7 @@ public class SwitchImpl extends TrackElementImpl implements Switch {
 			case SihuhuPackage.SWITCH__CONNECTIONS:
 				return connections != null && !connections.isEmpty();
 			case SihuhuPackage.SWITCH__CONNECTED_RAILS:
-				return !getConnectedRails().isEmpty();
+				return CONNECTED_RAILS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case SihuhuPackage.SWITCH__ACTIVE_CONNECTION:
 				return activeConnection != null;
 		}

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore settingDelegates='org.eclipse.incquery.querybasedfeature'"
  * @generated
  */
 public interface SihuhuPackage extends EPackage {

@@ -1,0 +1,36 @@
+grammar hu.bme.mit.rnd.behavior.text.BehaviorDSL with org.eclipse.xtext.common.Terminals
+
+//generate behaviorDSL "http://www.bme.hu/mit/rnd/behavior/text/BehaviorDSL"
+import "platform:/resource/hu.bme.mit.rnd.behavior/model/Behavior.ecore" as behav
+
+	
+System returns behav::System:
+	'System' name=ID '{'
+	events+=Event*
+	components+=Component*
+	'}'
+;
+
+Component returns behav::Component:
+	'Component' name=ID '{'
+	states+=State*
+	'*' currentState=[behav::State]
+	transitions+=Transition*
+	'}'
+;
+
+Transition returns behav::Transition:
+	'Transition' name=ID ':'
+	fromState=[behav::State] '->' toState=[behav::State] 
+	'on' triggeringEvent=[behav::Event] 
+	( ('guard' ':' guardStates+=[behav::State]) | ('guards' ':' guardStates+=[behav::State] (',' guardStates+=[behav::State])+) )?
+	( 'generates' generatedEvent=[behav::Event])? ';'
+;
+
+State returns behav::State:
+	'State' name=ID ';'
+;
+
+Event returns behav::Event:
+	'Event' name=ID ';'
+;

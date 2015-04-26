@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sihuhu -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="hu.bme.mit.rnd.sihuhu.sihuhu.presentation.SihuhuModelWizardID"
+            name="%_UI_SihuhuModelWizard_label"
+            class="hu.bme.mit.rnd.sihuhu.sihuhu.presentation.SihuhuModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SihuhuModelFile.gif">
+         <description>%_UI_SihuhuModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sihuhu -->
+      <editor
+            id="hu.bme.mit.rnd.sihuhu.sihuhu.presentation.SihuhuEditorID"
+            name="%_UI_SihuhuEditor_label"
+            icon="icons/full/obj16/SihuhuModelFile.gif"
+            extensions="sihuhu"
+            class="hu.bme.mit.rnd.sihuhu.sihuhu.presentation.SihuhuEditor"
+            contributorClass="hu.bme.mit.rnd.sihuhu.sihuhu.presentation.SihuhuActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

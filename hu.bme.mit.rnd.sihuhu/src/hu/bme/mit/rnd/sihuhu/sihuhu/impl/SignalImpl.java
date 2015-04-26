@@ -7,7 +7,7 @@ import hu.bme.mit.rnd.sihuhu.sihuhu.Signal;
 import hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuPackage;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,14 +25,24 @@ import org.eclipse.emf.ecore.InternalEObject;
  */
 public class SignalImpl extends NamedElementImpl implements Signal {
 	/**
-	 * The default value of the '{@link #isEnabled() <em>Enabled</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getNextRail() <em>Next Rail</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextRail()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate NEXT_RAIL__ESETTING_DELEGATE = ((EStructuralFeature.Internal)SihuhuPackage.Literals.SIGNAL__NEXT_RAIL).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #isEnabled() <em>Enabled</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isEnabled()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ENABLED_EDEFAULT = false;
+	protected EStructuralFeature.Internal.SettingDelegate ENABLED__ESETTING_DELEGATE = ((EStructuralFeature.Internal)SihuhuPackage.Literals.SIGNAL__ENABLED).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,8 +69,7 @@ public class SignalImpl extends NamedElementImpl implements Signal {
 	 * @generated
 	 */
 	public Rail getNextRail() {
-		Rail nextRail = basicGetNextRail();
-		return nextRail != null && nextRail.eIsProxy() ? (Rail)eResolveProxy((InternalEObject)nextRail) : nextRail;
+		return (Rail)NEXT_RAIL__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -69,10 +78,7 @@ public class SignalImpl extends NamedElementImpl implements Signal {
 	 * @generated
 	 */
 	public Rail basicGetNextRail() {
-		// TODO: implement this method to return the 'Next Rail' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return (Rail)NEXT_RAIL__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -81,9 +87,7 @@ public class SignalImpl extends NamedElementImpl implements Signal {
 	 * @generated
 	 */
 	public boolean isEnabled() {
-		// TODO: implement this method to return the 'Enabled' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return (Boolean)ENABLED__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -112,9 +116,9 @@ public class SignalImpl extends NamedElementImpl implements Signal {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case SihuhuPackage.SIGNAL__NEXT_RAIL:
-				return basicGetNextRail() != null;
+				return NEXT_RAIL__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case SihuhuPackage.SIGNAL__ENABLED:
-				return isEnabled() != ENABLED_EDEFAULT;
+				return ENABLED__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

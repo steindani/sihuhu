@@ -29,9 +29,7 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference sihuhu.ecore#//Switch/connectedRails"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sihuhu.ecore#//Switch/activeConnection"/>
     </genClasses>
-    <genClasses ecoreClass="sihuhu.ecore#//SwitchConnection">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute sihuhu.ecore#//SwitchConnection/free"/>
-    </genClasses>
+    <genClasses ecoreClass="sihuhu.ecore#//SwitchConnection"/>
     <genClasses ecoreClass="sihuhu.ecore#//Train">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sihuhu.ecore#//Train/nextElement"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sihuhu.ecore#//Train/onTracks"/>
@@ -39,6 +37,9 @@
     <genClasses ecoreClass="sihuhu.ecore#//Signal">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference sihuhu.ecore#//Signal/nextRail"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute sihuhu.ecore#//Signal/enabled"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sihuhu.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sihuhu.ecore#//NamedElement/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

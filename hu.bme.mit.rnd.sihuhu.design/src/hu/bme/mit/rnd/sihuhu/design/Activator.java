@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
     // The plug-in ID
-    public static final String PLUGIN_ID = "sihuhu.design";
+    public static final String PLUGIN_ID = "hu.bme.mit.rnd.sihuhu.design";
 
     // The shared instance
     private static Activator plugin;

@@ -51,6 +51,7 @@ public interface Switch extends TrackElement {
 	 * @return the value of the '<em>Connected Rails</em>' reference list.
 	 * @see hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuPackage#getSwitch_ConnectedRails()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="org.eclipse.incquery.querybasedfeature patternFQN='hu.bme.mit.rnd.sihuhu.incquery.connectedRails'"
 	 * @generated
 	 */
 	EList<Rail> getConnectedRails();

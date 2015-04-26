@@ -5,9 +5,6 @@
 -->
 
 <plugin>
-   <requires>
-      <import plugin="org.eclipse.emf.ecore" version="2.10.2"/>
-   </requires>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated sihuhu -->
