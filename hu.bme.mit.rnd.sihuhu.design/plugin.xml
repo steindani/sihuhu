@@ -13,5 +13,13 @@
            actionClass="hu.bme.mit.rnd.sihuhu.design.ConnectRails"
            id="sihuhu.design.connectRails">
      </javaActions>
+     <javaActions
+           actionClass="hu.bme.mit.rnd.sihuhu.design.ConnectRailsFromFrom"
+           id="sihuhu.design.connectRailsFromFrom">
+     </javaActions>
+     <javaActions
+           actionClass="hu.bme.mit.rnd.sihuhu.design.ConnectRailsToTo"
+           id="sihuhu.design.connectRailsToTo">
+     </javaActions>
   </extension>
 </plugin>

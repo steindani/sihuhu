@@ -112,6 +112,30 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ConnectToTo" label="Connect Rails (to - to)" edgeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='SC%20From']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="AdvancedConnectRailsToTo" id="sihuhu.design.connectRailsToTo">
+                <parameters name="source" value="var:source"/>
+                <parameters name="target" value="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ConnectFromFrom" label="Connect Rails (from - from)" edgeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection'] //@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='SC%20From']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="AdvancedConnectRailsFromFrom" id="sihuhu.design.connectRailsFromFrom">
+                <parameters name="source" value="var:source"/>
+                <parameters name="target" value="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
       <additionalLayers name="DisplayLayer">
