@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Handler
+Bundle-SymbolicName: hu.bme.mit.rnd.behavior.handler
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: hu.bme.mit.rnd.behavior.handler.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ hu.bme.mit.rnd.behavior;bundle-version="0.1.0",
+ hu.bme.mit.rnd.sihuhu;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+
