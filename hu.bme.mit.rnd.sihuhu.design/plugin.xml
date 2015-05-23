@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
 <plugin>
+   <extension-point id="sihuhu_simulator" name="Simulator" schema="schema/sihuhu_simulator.exsd"/>
   <extension point="org.eclipse.sirius.componentization">
     <component class="hu.bme.mit.rnd.sihuhu.design.Activator"
                id="sihuhu.design"
@@ -21,5 +22,33 @@
            actionClass="hu.bme.mit.rnd.sihuhu.design.ConnectRailsToTo"
            id="sihuhu.design.connectRailsToTo">
      </javaActions>
+     <javaActions
+           actionClass="hu.bme.mit.rnd.sihuhu.design.RunSimulation"
+           id="hu.bme.mit.rnd.sihuhu.design.RunSimulation">
+     </javaActions>
+  </extension>
+  <extension
+        point="org.eclipse.ui.actionSets">
+     <actionSet
+           id="hu.bme.mit.rnd.sihuhu.design.actionSet"
+           label="Sihuhu Action Set"
+           visible="true">
+        <menu
+              id="hu.bme.mit.rnd.sihuhu.design.menu1"
+              label="Sihuhu Menu">
+           <separator
+                 name="hu.bme.mit.rnd.sihuhu.design.separator1">
+           </separator>
+        </menu>
+        <action
+              class="hu.bme.mit.rnd.sihuhu.design.actions.SimulateAction"
+              icon="images/train-icon.png"
+              id="hu.bme.mit.rnd.sihuhu.design.action1"
+              label="&amp;Sample Action"
+              menubarPath="hu.bme.mit.rnd.sihuhu.design.menu1/hu.bme.mit.rnd.sihuhu.design.separator1"
+              style="push"
+              toolbarPath="hu.bme.mit.rnd.sihuhu.design.separator1">
+        </action>
+     </actionSet>
   </extension>
 </plugin>
