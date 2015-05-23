@@ -14,19 +14,9 @@ import desmoj.core.simulator.Experiment;
 import desmoj.core.simulator.TimeInstant;
 
 public class SimulationRunner {
-	
-	
-	public static void main(String[] args) {
-		try {
-			Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("sihuhu", new XMIResourceFactoryImpl());
-
-			ResourceSet resourceSet = new ResourceSetImpl();
-			SihuhuPackage.eINSTANCE.eClass();
-			
-			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Instance1.sihuhu"), true);
-			Resource dynamicRes = null; //TODO: Add dynamic resource
+	public static void runSimulation(Resource structuralResource, Resource dynamicResource) {
 		
-        SihuhuSimulationModel model = new SihuhuSimulationModel(structuralRes, dynamicRes, null, "Sihuhu Simulation Model", true, false);
+        SihuhuSimulationModel model = new SihuhuSimulationModel(structuralResource, dynamicResource, null, "Sihuhu Simulation Model", true, false);
 
         Experiment experiment = new Experiment("Experiment", TimeUnit.SECONDS, TimeUnit.SECONDS, null);
 
@@ -44,6 +34,20 @@ public class SimulationRunner {
         experiment.report();
 
         experiment.finish();
+		
+	}
+	
+	public static void main(String[] args) {
+		try {
+			Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("sihuhu", new XMIResourceFactoryImpl());
+
+			ResourceSet resourceSet = new ResourceSetImpl();
+			SihuhuPackage.eINSTANCE.eClass();
+			
+			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Instance1.sihuhu"), true);
+			Resource dynamicRes = null; //TODO: Add dynamic resource
+		
+			runSimulation(structuralRes, dynamicRes);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
