@@ -8,7 +8,9 @@ import hu.bme.mit.rnd.sihuhu.sihuhu.World;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import desmoj.core.simulator.Model;
 import desmoj.core.simulator.TimeInstant;
@@ -20,6 +22,7 @@ public class SihuhuSimulationModel extends Model {
 	
 	protected Resource resourceStructural;
 	protected Resource resourceDynamic;
+	public TransactionalEditingDomain editingDomain;
 
 	public SihuhuSimulationModel(Resource structuralRes, Resource dynamicRes, Model owner, String name,
 			boolean showInReport, boolean showInTrace) {
@@ -88,6 +91,7 @@ public class SihuhuSimulationModel extends Model {
 								trains.put(train.getName(), new TrainEntity(train, this, train.getName(), false));
 				});
 		
+		editingDomain = (TransactionalEditingDomain) SimulationRunner.getEditingDomainFor(world);
 		
 	}
 

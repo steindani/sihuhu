@@ -5,10 +5,14 @@ import hu.bme.mit.rnd.sihuhu.sihuhu.SihuhuPackage;
 import java.util.concurrent.TimeUnit;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import desmoj.core.simulator.Experiment;
@@ -28,13 +32,25 @@ public class SimulationRunner {
 
         // Set when to stop the simulation
         experiment.stop(new TimeInstant(1, TimeUnit.HOURS));
+        
+        class runThread extends Thread{
+        	@Override
+			public void run(){
+                experiment.start();
 
-        experiment.start();
+                // Create the report files
+                experiment.report();
 
-        // Create the report files
-        experiment.report();
+                experiment.finish();
+        	}
+        }
+        
+        Thread t = new runThread();
+        t.start();
 
-        experiment.finish();
+
+        
+        
 		
 	}
 	
@@ -60,36 +76,36 @@ public class SimulationRunner {
 	 *  don't forget to cast to TransactionalEditingDomain
 	 *  source: http://www.eclipse.org/forums/index.php/t/129694/
 	 */
-//	static public EditingDomain getEditingDomainFor(EObject object) {
-//		Resource resource = object.eResource();
-//		if (resource != null) {
-//
-//			IEditingDomainProvider editingDomainProvider = (IEditingDomainProvider) EcoreUtil
-//					.getExistingAdapter(resource, IEditingDomainProvider.class);
-//
-//			if (editingDomainProvider != null) {
-//				return editingDomainProvider.getEditingDomain();
-//			} else {
-//				ResourceSet resourceSet = resource.getResourceSet();
-//
-//				if (resourceSet instanceof IEditingDomainProvider) {
-//					EditingDomain editingDomain = ((IEditingDomainProvider) resourceSet)
-//							.getEditingDomain();
-//					return editingDomain;
-//				} else if (resourceSet != null) {
-//					editingDomainProvider = (IEditingDomainProvider) EcoreUtil
-//							.getExistingAdapter(resourceSet,
-//									IEditingDomainProvider.class);
-//					if (editingDomainProvider != null) {
-//						return editingDomainProvider.getEditingDomain();
-//					}
-//				}
-//			}
-//		}
-//		
-//		
-//
-//		return null;
-//	}
+	static public EditingDomain getEditingDomainFor(EObject object) {
+		Resource resource = object.eResource();
+		if (resource != null) {
+
+			IEditingDomainProvider editingDomainProvider = (IEditingDomainProvider) EcoreUtil
+					.getExistingAdapter(resource, IEditingDomainProvider.class);
+
+			if (editingDomainProvider != null) {
+				return editingDomainProvider.getEditingDomain();
+			} else {
+				ResourceSet resourceSet = resource.getResourceSet();
+
+				if (resourceSet instanceof IEditingDomainProvider) {
+					EditingDomain editingDomain = ((IEditingDomainProvider) resourceSet)
+							.getEditingDomain();
+					return editingDomain;
+				} else if (resourceSet != null) {
+					editingDomainProvider = (IEditingDomainProvider) EcoreUtil
+							.getExistingAdapter(resourceSet,
+									IEditingDomainProvider.class);
+					if (editingDomainProvider != null) {
+						return editingDomainProvider.getEditingDomain();
+					}
+				}
+			}
+		}
+		
+		
+
+		return null;
+	}
 	
 }
