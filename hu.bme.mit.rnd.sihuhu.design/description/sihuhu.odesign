@@ -147,7 +147,7 @@
             </centerLabelStyleDescription>
           </style>
           <conditionnalStyles predicateExpression="[thisEObject.train &lt;> null/]">
-            <style sizeComputationExpression="5" endsCentering="Both">
+            <style targetArrow="NoDecoration" sizeComputationExpression="5" endsCentering="Both">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
               <centerLabelStyleDescription>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -187,18 +187,32 @@
         <containerMappings xsi:type="description_1:ContainerMappingImport" name="DisplayWorld" semanticCandidatesExpression="[self/]" domainClass="sihuhu.World" reusedNodeMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']" importedMapping="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']">
           <subContainerMappings name="DisplayTrack" semanticCandidatesExpression="[self.tracks/]" domainClass="sihuhu.Track" reusedContainerMappings="//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']">
             <subNodeMappings name="Rail From Signal" semanticCandidatesExpression="[rails.allowedFrom->union(switches.connections.allowedFrom)/]" domainClass="sihuhu.Signal">
-              <style xsi:type="style:DotDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <style xsi:type="style:DotDescription" borderSizeComputationExpression="5" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
               </style>
+              <conditionnalStyles predicateExpression="[eContainer().oclAsType(Rail).from.train &lt;> null/]">
+                <style xsi:type="style:DotDescription" borderSizeComputationExpression="5" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                </style>
+              </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="Rail To Signal" semanticCandidatesExpression="[rails.allowedTo->union(switches.connections.allowedTo)/]" domainClass="sihuhu.Signal">
-              <style xsi:type="style:DotDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <style xsi:type="style:DotDescription" borderSizeComputationExpression="5" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
               </style>
+              <conditionnalStyles predicateExpression="[eContainer().oclAsType(Rail).to.train &lt;> null/]">
+                <style xsi:type="style:DotDescription" borderSizeComputationExpression="5" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="4">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+                </style>
+              </conditionnalStyles>
             </subNodeMappings>
             <subNodeMappings name="SwitchNode" semanticCandidatesExpression="[thisEObject.switches/]" domainClass="sihuhu.Switch">
               <style xsi:type="style:EllipseNodeDescription" labelSize="10" labelFormat="bold" showIcon="false" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(thisEObject.connections -> size() + 1 ) * 3/]" verticalDiameterComputationExpression="[(thisEObject.connections -> size() + 1 ) * 3/]">
