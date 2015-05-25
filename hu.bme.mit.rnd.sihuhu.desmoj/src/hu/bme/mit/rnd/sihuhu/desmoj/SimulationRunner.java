@@ -31,7 +31,7 @@ public class SimulationRunner {
         experiment.traceOn(new TimeInstant(0));
 
         // Set when to stop the simulation
-        experiment.stop(new TimeInstant(12, TimeUnit.HOURS));
+        experiment.stop(new TimeInstant(12, TimeUnit.MINUTES));
         
         class runThread extends Thread{
         	@Override
@@ -62,7 +62,7 @@ public class SimulationRunner {
 			SihuhuPackage.eINSTANCE.eClass();
 			TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain(resourceSet);
 			
-			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Tanszek.sihuhu"), true);
+			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Instance1.sihuhu"), true);
 			Resource dynamicRes = null; //TODO: Add dynamic resource
 		
 			runSimulation(structuralRes, dynamicRes, false);

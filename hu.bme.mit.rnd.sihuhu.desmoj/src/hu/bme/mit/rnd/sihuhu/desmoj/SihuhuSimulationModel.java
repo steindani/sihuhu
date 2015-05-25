@@ -1,6 +1,7 @@
 package hu.bme.mit.rnd.sihuhu.desmoj;
 
 import hu.bme.mit.rnd.behavior.handler.BehaviorModelManager;
+import hu.bme.mit.rnd.sihuhu.desmoj.entities.RailEntity;
 import hu.bme.mit.rnd.sihuhu.desmoj.entities.TrainEntity;
 import hu.bme.mit.rnd.sihuhu.desmoj.events.RandomTrainEvent;
 import hu.bme.mit.rnd.sihuhu.sihuhu.Switch;
@@ -23,6 +24,7 @@ public class SihuhuSimulationModel extends Model {
 
 	public Map<String, TrainEntity> trains;
 	public Map<String, TrackElement> trackElements;
+	public Map<String, RailEntity> mockRails;
 	public Map<String, Switch> switches;
 	
 	public Map<String, Component> dynComponents;
@@ -58,7 +60,7 @@ public class SihuhuSimulationModel extends Model {
 		int idx = new Random().nextInt(trains.values().toArray().length);
 		TrainEntity randomTrain = (TrainEntity)(trains.values().toArray()[idx]);
 	
-		RandomTrainEvent nextRandomTrainEvent = new RandomTrainEvent(this, "Random Train Event", true);
+		RandomTrainEvent nextRandomTrainEvent = new RandomTrainEvent(this, "Random Train Event", false);
 		nextRandomTrainEvent.schedule(randomTrain, new TimeInstant(0));
 	}
 
@@ -66,6 +68,7 @@ public class SihuhuSimulationModel extends Model {
 	public void init() {
 		trains = new HashMap<String, TrainEntity>();
 		trackElements = new HashMap<String, TrackElement>();
+		mockRails = new HashMap<String, RailEntity>();
 		switches = new HashMap<String, Switch>();
 		dynComponents = new HashMap<String, Component>();
 		dynEvents = new HashMap<String, Event>();
@@ -106,12 +109,18 @@ public class SihuhuSimulationModel extends Model {
 							});
 				});
 		
+		trackElements.keySet().forEach(
+				element -> {
+					mockRails.put(element, new RailEntity(this, element, true));
+				}
+				);
+		
 		
 		writeDebug("\nTrains:");
 		world.getTrains().forEach(
 				train -> {
 								writeDebug(train.getName());
-								trains.put(train.getName(), new TrainEntity(train, this, train.getName(), false));
+								trains.put(train.getName(), new TrainEntity(train, this, train.getName(), true));
 				});
 		
 		//If there is no given Dynamic model, we generate one

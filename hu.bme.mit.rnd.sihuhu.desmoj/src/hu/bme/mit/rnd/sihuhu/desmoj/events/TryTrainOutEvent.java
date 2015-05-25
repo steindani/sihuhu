@@ -1,5 +1,7 @@
 package hu.bme.mit.rnd.sihuhu.desmoj.events;
 
+import java.util.concurrent.TimeUnit;
+
 import org.eclipse.emf.transaction.RecordingCommand;
 
 import Behavior.Component;
@@ -10,12 +12,13 @@ import hu.bme.mit.rnd.sihuhu.sihuhu.Rail;
 import hu.bme.mit.rnd.sihuhu.sihuhu.TrackElement;
 import desmoj.core.simulator.Event;
 import desmoj.core.simulator.Model;
+import desmoj.core.simulator.TimeSpan;
 
-public class TrainOutEvent extends Event<TrainEntity> {
+public class TryTrainOutEvent extends Event<TrainEntity> {
 
 	private SihuhuSimulationModel model;
 
-	public TrainOutEvent(Model owner, String name, boolean showInTrace) {
+	public TryTrainOutEvent(Model owner, String name, boolean showInTrace) {
 		super(owner, name, showInTrace);
 		model = (SihuhuSimulationModel) owner;
 	}
@@ -37,6 +40,9 @@ public class TrainOutEvent extends Event<TrainEntity> {
 
 				System.out.println("Train (" + train1.myTrain.getName()
 						+ ") left " + te.getName());
+				
+				TraceTrainOutEvent evt = new TraceTrainOutEvent(model, "Train left rail", true);
+				evt.schedule(train1, model.mockRails.get(te.getName()), new TimeSpan(0, TimeUnit.SECONDS));
 
 				if (model.isDebug)
 					for (Component c : model.dynComponents.values()) {

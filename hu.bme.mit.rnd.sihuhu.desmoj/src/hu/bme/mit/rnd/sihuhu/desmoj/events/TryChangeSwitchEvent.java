@@ -19,11 +19,11 @@ import desmoj.core.simulator.Event;
 import desmoj.core.simulator.Model;
 import desmoj.core.simulator.TimeSpan;
 
-public class RandomSwitchEvent extends Event<TrainEntity> {
+public class TryChangeSwitchEvent extends Event<TrainEntity> {
 
 	private SihuhuSimulationModel model;
 
-	public RandomSwitchEvent(Model owner, String name, boolean showInTrace) {
+	public TryChangeSwitchEvent(Model owner, String name, boolean showInTrace) {
 		super(owner, name, showInTrace);
 		model = (SihuhuSimulationModel) owner;
 	}
@@ -70,6 +70,9 @@ public class RandomSwitchEvent extends Event<TrainEntity> {
 
 		System.out.println("Train (" + train1.myTrain.getName()
 				+ ") switched " + sw.getName() + " into " + randomConn.getName());
+		
+		TraceChangeSwitchEvent evt = new TraceChangeSwitchEvent(model, "Train changed switch", true);
+		evt.schedule(train1, model.mockRails.get(sw.getName()), model.mockRails.get(randomConn.getName()), new TimeSpan(0, TimeUnit.SECONDS));
 
 		if (model.isDebug)
 			for (Component c : model.dynComponents.values()) {
@@ -86,8 +89,8 @@ public class RandomSwitchEvent extends Event<TrainEntity> {
 					}
 				});
 
-		TrainInEvent trainInEvent = new TrainInEvent(model, "Train Comes In event", true);
-		trainInEvent.schedule(train1, new TimeSpan(1, TimeUnit.MINUTES));
+		TryTrainInEvent trainInEvent = new TryTrainInEvent(model, "Try to come in", false);
+		trainInEvent.schedule(train1, new TimeSpan(1, TimeUnit.SECONDS));
 	}
 
 	private Rail getEffectiveElement(TrackElement te) {

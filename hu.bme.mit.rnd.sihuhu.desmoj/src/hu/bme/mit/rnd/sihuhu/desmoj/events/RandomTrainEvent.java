@@ -23,16 +23,16 @@ public class RandomTrainEvent extends Event<TrainEntity> {
 	public void eventRoutine(TrainEntity train1) {
 		
 		if(train1.myTrain.getOnTracks().size()>1){		
-				TrainOutEvent trainOutEvent = new TrainOutEvent(model, "Train Goes Out event", true);
-				trainOutEvent.schedule(train1, new TimeSpan(1, TimeUnit.MINUTES));
+				TryTrainOutEvent trainOutEvent = new TryTrainOutEvent(model, "Try to go out", false);
+				trainOutEvent.schedule(train1, new TimeSpan(1, TimeUnit.SECONDS));
 		} else {
 			if (train1.myTrain.getNextElement()!=null){
 				if (model.switches.get(train1.myTrain.getNextElement().getName())!=null) {
-					RandomSwitchEvent randomSwitchEvent = new RandomSwitchEvent(model, "Random Switch event", true);
-					randomSwitchEvent.schedule(train1, new TimeSpan(1, TimeUnit.MINUTES));
+					TryChangeSwitchEvent randomSwitchEvent = new TryChangeSwitchEvent(model, "Try to change switch", false);
+					randomSwitchEvent.schedule(train1, new TimeSpan(1, TimeUnit.SECONDS));
 				} else {
-					TrainInEvent trainInEvent = new TrainInEvent(model, "Train Comes In event", true);
-					trainInEvent.schedule(train1, new TimeSpan(2, TimeUnit.MINUTES));
+					TryTrainInEvent trainInEvent = new TryTrainInEvent(model, "Try to come in", false);
+					trainInEvent.schedule(train1, new TimeSpan(2, TimeUnit.SECONDS));
 				}
 			} else {
 				System.out.println("Train ("+train1.myTrain.getName()+") has nowhere to go! :(");
@@ -44,8 +44,8 @@ public class RandomTrainEvent extends Event<TrainEntity> {
 		int idx = new Random().nextInt(model.trains.values().toArray().length);
 		TrainEntity randomTrain = (TrainEntity)(model.trains.values().toArray()[idx]);
 	
-		RandomTrainEvent nextRandomTrainEvent = new RandomTrainEvent(model, "Random Train Event", true);
-		nextRandomTrainEvent.schedule(randomTrain, new TimeSpan(5, TimeUnit.MINUTES));
+		RandomTrainEvent nextRandomTrainEvent = new RandomTrainEvent(model, "Random Train Event", false);
+		nextRandomTrainEvent.schedule(randomTrain, new TimeSpan(5, TimeUnit.SECONDS));
 	}
 
 }

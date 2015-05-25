@@ -1,5 +1,7 @@
 package hu.bme.mit.rnd.sihuhu.desmoj.events;
 
+import java.util.concurrent.TimeUnit;
+
 import org.eclipse.emf.transaction.RecordingCommand;
 
 import Behavior.Component;
@@ -11,12 +13,13 @@ import hu.bme.mit.rnd.sihuhu.sihuhu.Switch;
 import hu.bme.mit.rnd.sihuhu.sihuhu.TrackElement;
 import desmoj.core.simulator.Event;
 import desmoj.core.simulator.Model;
+import desmoj.core.simulator.TimeSpan;
 
-public class TrainInEvent extends Event<TrainEntity> {
+public class TryTrainInEvent extends Event<TrainEntity> {
 
 	private SihuhuSimulationModel model;
 
-	public TrainInEvent(Model owner, String name, boolean showInTrace) {
+	public TryTrainInEvent(Model owner, String name, boolean showInTrace) {
 		super(owner, name, showInTrace);
 		model = (SihuhuSimulationModel) owner;
 	}
@@ -55,6 +58,9 @@ public class TrainInEvent extends Event<TrainEntity> {
 
 				System.out.println("Train (" + train1.myTrain.getName()
 						+ ") came into " + newRail.getName());
+				
+				TraceTrainInEvent evt = new TraceTrainInEvent(model, "Train came in", true);
+				evt.schedule(train1, model.mockRails.get(newRail.getName()), new TimeSpan(0, TimeUnit.SECONDS));
 
 				if (model.isDebug)
 					for (Component c : model.dynComponents.values()) {
