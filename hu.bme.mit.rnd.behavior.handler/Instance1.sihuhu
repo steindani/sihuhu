@@ -35,7 +35,7 @@
         <allowedFrom name="t1signalScNW1_N"/>
       </connections>
     </switches>
-    <switches name="t1swNE" activeConnection="t1scNE2">
+    <switches name="t1swNE" activeConnection="t1scNE1">
       <connections name="t1scNE1" from="t1segE" to="t1segN1">
         <allowedTo name="t1signalScNE1_N"/>
         <allowedFrom name="t1signalScNE1_E"/>

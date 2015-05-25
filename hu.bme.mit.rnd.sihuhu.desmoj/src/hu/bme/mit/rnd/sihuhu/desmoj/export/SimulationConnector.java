@@ -15,7 +15,7 @@ public class SimulationConnector implements ISimulationConnector {
 	public void runSimulation(Resource structuralResource) {
 		System.out.println("Running Eclipse-connected simulation.");
 		try {
-			SimulationRunner.runSimulation(structuralResource, null);
+			SimulationRunner.runSimulation(structuralResource, null, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,13 +1,18 @@
 package hu.bme.mit.rnd.sihuhu.desmoj.events;
 
+import org.eclipse.emf.transaction.RecordingCommand;
+
+import Behavior.Component;
+import hu.bme.mit.rnd.behavior.handler.BehaviorModelManager;
 import hu.bme.mit.rnd.sihuhu.desmoj.SihuhuSimulationModel;
-import hu.bme.mit.rnd.sihuhu.desmoj.entities.TrackElementEntity;
 import hu.bme.mit.rnd.sihuhu.desmoj.entities.TrainEntity;
-import desmoj.core.simulator.EventOf2Entities;
+import hu.bme.mit.rnd.sihuhu.sihuhu.Rail;
+import hu.bme.mit.rnd.sihuhu.sihuhu.TrackElement;
+import desmoj.core.simulator.Event;
 import desmoj.core.simulator.Model;
 
-public class TrainOutEvent extends EventOf2Entities<TrainEntity, TrackElementEntity>{
-	
+public class TrainOutEvent extends Event<TrainEntity> {
+
 	private SihuhuSimulationModel model;
 
 	public TrainOutEvent(Model owner, String name, boolean showInTrace) {
@@ -16,16 +21,71 @@ public class TrainOutEvent extends EventOf2Entities<TrainEntity, TrackElementEnt
 	}
 
 	@Override
-	public void eventRoutine(TrainEntity train1, TrackElementEntity trackElem1) {
-		
-		System.out.println("Train ("+ train1.myTrain.getName() +") went out ("+trackElem1.myElement.getName()+")!");
-		// TODO Implement this using the dynamic model!
-		
-		//TrainInEvent trainInEvent = new TrainInEvent(model, "Train comes In event", true);
-		
-		//trainInEvent.schedule(train1, model.trackElements.get("t1segS1"), new TimeSpan(1, TimeUnit.MINUTES));
-		
-		
+	public void eventRoutine(TrainEntity train1) {
+
+		if (model.isDebug)
+			System.out.println("Train out Event! :" + train1.myTrain.getName());
+
+		for (TrackElement te : train1.myTrain.getOnTracks()) {
+			if (!isNextTo(te, train1.myTrain.getNextElement())) {
+
+				// Update the dynamic model
+				BehaviorModelManager.eventComesIn(
+						model.dynSystem,
+						model.dynEvents.get("trainOut"
+								+ csillamize(te.getName())));
+
+				System.out.println("Train (" + train1.myTrain.getName()
+						+ ") left " + te.getName());
+
+				if (model.isDebug)
+					for (Component c : model.dynComponents.values()) {
+						System.out.println("        COMP: " + c.getName()
+								+ " STAT: " + c.getCurrentState().getName());
+					}
+
+				// Update the structural model
+				model.editingDomain.getCommandStack().execute(
+						new RecordingCommand(model.editingDomain) {
+							@Override
+							protected void doExecute() {
+								train1.myTrain.getOnTracks().remove(te);
+							}
+						});
+
+				pause();
+			}
+
+		}
+
 	}
 
+	private boolean isNextTo(TrackElement t1, TrackElement t2) {
+		try {
+			Rail rail = (Rail) (t1);
+			if (rail.getFrom().equals(t2)) {
+				return true;
+			}
+			if (rail.getTo().equals(t2)) {
+				return true;
+			}
+		} catch (Exception e) {
+			System.out.println("Someting bad happened with isNextTo"
+					+ e.getMessage());
+			return false;
+		}
+		return false;
+	}
+
+	private String csillamize(final String s) {
+		return Character.toUpperCase(s.charAt(0)) + s.substring(1);
+	}
+
+	private void pause() {
+		if (model.isGraphical)
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+			}
+	}
 }

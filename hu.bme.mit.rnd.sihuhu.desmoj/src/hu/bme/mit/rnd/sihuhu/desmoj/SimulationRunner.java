@@ -19,9 +19,9 @@ import desmoj.core.simulator.Experiment;
 import desmoj.core.simulator.TimeInstant;
 
 public class SimulationRunner {
-	public static void runSimulation(Resource structuralResource, Resource dynamicResource) {
+	public static void runSimulation(Resource structuralResource, Resource dynamicResource, boolean fromGraphical) {
 		
-        SihuhuSimulationModel model = new SihuhuSimulationModel(structuralResource, dynamicResource, null, "Sihuhu Simulation Model", true, false);
+        SihuhuSimulationModel model = new SihuhuSimulationModel(structuralResource, dynamicResource, fromGraphical, null, "Sihuhu Simulation Model", true, false);
 
         Experiment experiment = new Experiment("Experiment", TimeUnit.SECONDS, TimeUnit.SECONDS, null);
 
@@ -31,7 +31,7 @@ public class SimulationRunner {
         experiment.traceOn(new TimeInstant(0));
 
         // Set when to stop the simulation
-        experiment.stop(new TimeInstant(1, TimeUnit.HOURS));
+        experiment.stop(new TimeInstant(12, TimeUnit.HOURS));
         
         class runThread extends Thread{
         	@Override
@@ -62,10 +62,10 @@ public class SimulationRunner {
 			SihuhuPackage.eINSTANCE.eClass();
 			TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain(resourceSet);
 			
-			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Instance1.sihuhu"), true);
+			Resource structuralRes =  resourceSet.getResource(URI.createURI("./Tanszek.sihuhu"), true);
 			Resource dynamicRes = null; //TODO: Add dynamic resource
 		
-			runSimulation(structuralRes, dynamicRes);
+			runSimulation(structuralRes, dynamicRes, false);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

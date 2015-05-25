@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hu.bme.mit.rnd:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" name="My Little Little World">
+  <tracks name="T1">
+    <rails name="R1" from="R4" to="R2">
+      <allowedTo name="R1_to_R2"/>
+      <allowedFrom name="R1_from_R4"/>
+    </rails>
+    <rails name="R2" train="Train1" from="R1" to="R3">
+      <allowedTo name="R2_to_R3"/>
+      <allowedFrom name="R2_from_R1"/>
+    </rails>
+    <rails name="R3" from="R2" to="R4">
+      <allowedTo name="R3_to_R4"/>
+      <allowedFrom name="R3_from_R2"/>
+    </rails>
+    <rails name="R4" from="R3" to="R1">
+      <allowedTo name="R4_to_R1"/>
+      <allowedFrom name="R4_from_R3"/>
+    </rails>
+  </tracks>
+  <trains name="Train1" nextElement="R3" onTracks="R2"/>
+</hu.bme.mit.rnd:World>

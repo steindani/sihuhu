@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:hu.bme.mit.rnd="hu.bme.mit.rnd.sihuhu" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_iyv1UALdEeWYjb-y0UE98Q" selectedViews="_toKfsALdEeWYjb-y0UE98Q" version="8.1.1">
+  <models xmi:type="hu.bme.mit.rnd:World" href="Probacska.sihuhu#My Little Little World"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_toKfsALdEeWYjb-y0UE98Q" initialized="true">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_0j_CUALdEeWYjb-y0UE98Q" name="Probacska">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_0kR9QALdEeWYjb-y0UE98Q" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_0kR9QQLdEeWYjb-y0UE98Q" type="Sirius" element="_0j_CUALdEeWYjb-y0UE98Q" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_0kbuQALdEeWYjb-y0UE98Q" type="2002" element="_0j_CUQLdEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_0klfQALdEeWYjb-y0UE98Q" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_0klfQQLdEeWYjb-y0UE98Q" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_9n_ZcALdEeWYjb-y0UE98Q" type="3008" element="_9mdvcALdEeWYjb-y0UE98Q">
+                <children xmi:type="notation:Node" xmi:id="_9n_ZcwLdEeWYjb-y0UE98Q" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_9n_ZdALdEeWYjb-y0UE98Q" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="__3f98ALdEeWYjb-y0UE98Q" type="3007" element="__2dcIALdEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="__3f98wLdEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="__3f99ALdEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="__3pu8gLdEeWYjb-y0UE98Q" type="3002" element="__2dcIQLdEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="__3pu8wLdEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3pu9ALdEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="__3f98QLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3f98gLdEeWYjb-y0UE98Q" x="95" y="14" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="__3f99QLdEeWYjb-y0UE98Q" type="3007" element="__2dcJQLdEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="__3pu8ALdEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="__3pu8QLdEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="__3pu9QLdEeWYjb-y0UE98Q" type="3002" element="__2dcJgLdEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="__3pu9gLdEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3pu9wLdEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="__3f99gLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3f99wLdEeWYjb-y0UE98Q" x="30" y="180" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_AzWiMALeEeWYjb-y0UE98Q" type="3007" element="_AzDAMALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_AzWiMwLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_AzWiNALeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_AzWiOgLeEeWYjb-y0UE98Q" type="3002" element="_AzDAMQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiOwLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiPALeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiMQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiMgLeEeWYjb-y0UE98Q" x="69" y="239" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_AzWiNQLeEeWYjb-y0UE98Q" type="3007" element="_AzDANQLeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_AzWiOALeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_AzWiOQLeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_AzWiPQLeEeWYjb-y0UE98Q" type="3002" element="_AzDANgLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiPgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiPwLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiNgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiNwLeEeWYjb-y0UE98Q" x="170" y="219" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BR6GdQLeEeWYjb-y0UE98Q" type="3007" element="_BRmkcALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BR6GeALeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BR6GeQLeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BSDQZQLeEeWYjb-y0UE98Q" type="3002" element="_BRmkcQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BSDQZgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQZwLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BR6GdgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BR6GdwLeEeWYjb-y0UE98Q" x="220" y="194" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BSDQYALeEeWYjb-y0UE98Q" type="3007" element="_BRwVcALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BSDQYwLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BSDQZALeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BSDQaALeEeWYjb-y0UE98Q" type="3002" element="_BRwVcQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BSDQaQLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQagLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BSDQYQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQYgLeEeWYjb-y0UE98Q" x="300" y="127" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BuIvcALeEeWYjb-y0UE98Q" type="3007" element="_BtsDgALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BuIvcwLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BuIvdALeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BuIvegLeEeWYjb-y0UE98Q" type="3002" element="_BtsDgQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvewLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvfALeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvcQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvcgLeEeWYjb-y0UE98Q" x="285" y="68" width="40" height="40"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BuIvdQLeEeWYjb-y0UE98Q" type="3007" element="_Bt10gALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BuIveALeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BuIveQLeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BuIvfQLeEeWYjb-y0UE98Q" type="3002" element="_Bt10gQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvfgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvfwLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvdgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvdwLeEeWYjb-y0UE98Q" x="160" y="9" width="40" height="40"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_9n_ZdQLdEeWYjb-y0UE98Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_9n_ZdgLdEeWYjb-y0UE98Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_9n_ZcQLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9n_ZcgLdEeWYjb-y0UE98Q" x="70" y="64" height="373"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_9n_ZdwLdEeWYjb-y0UE98Q" type="3008" element="_9nsegALdEeWYjb-y0UE98Q">
+                <children xmi:type="notation:Node" xmi:id="_9n_ZegLdEeWYjb-y0UE98Q" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_9n_ZewLdEeWYjb-y0UE98Q" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="__3pu-ALdEeWYjb-y0UE98Q" type="3007" element="__01EcALdEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="__3pu-wLdEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="__3pu_ALdEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="__3pu_QLdEeWYjb-y0UE98Q" type="3003" element="__0-1cALdEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="__3pu_gLdEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3pu_wLdEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="__3pu-QLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3pu-gLdEeWYjb-y0UE98Q" x="250" y="54" width="30" height="30"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_AzWiQALeEeWYjb-y0UE98Q" type="3007" element="_AyeYcALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_AzWiQwLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_AzWiRALeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_AzWiRQLeEeWYjb-y0UE98Q" type="3003" element="_AyeYcQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiRgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiRwLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_AzWiQQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiQgLeEeWYjb-y0UE98Q" x="105" y="174" width="30" height="30"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BSDQawLeEeWYjb-y0UE98Q" type="3007" element="_BRKfkALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BSDQbgLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BSDQbwLeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BSDQcALeEeWYjb-y0UE98Q" type="3003" element="_BRKfkQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BSDQcQLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQcgLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BSDQbALeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQbQLeEeWYjb-y0UE98Q" x="265" y="269" width="30" height="30"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_BuIvgALeEeWYjb-y0UE98Q" type="3007" element="_BtLtMALeEeWYjb-y0UE98Q">
+                    <children xmi:type="notation:Node" xmi:id="_BuIvgwLeEeWYjb-y0UE98Q" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_BuIvhALeEeWYjb-y0UE98Q" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_BuIvhQLeEeWYjb-y0UE98Q" type="3003" element="_BtLtMQLeEeWYjb-y0UE98Q">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvhgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvhwLeEeWYjb-y0UE98Q"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_BuIvgQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvggLeEeWYjb-y0UE98Q" x="390" y="174" width="30" height="30"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_9n_ZfALdEeWYjb-y0UE98Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_9n_ZfQLdEeWYjb-y0UE98Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_9n_ZeALdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9n_ZeQLdEeWYjb-y0UE98Q" x="490" y="64" width="498" height="358"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_WUP30ALeEeWYjb-y0UE98Q" type="3007" element="_WRhT8ALeEeWYjb-y0UE98Q">
+                <children xmi:type="notation:Node" xmi:id="_WUP30wLeEeWYjb-y0UE98Q" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_WUP31ALeEeWYjb-y0UE98Q" y="-21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_WUP31QLeEeWYjb-y0UE98Q" type="3005" element="_WRrE8ALeEeWYjb-y0UE98Q">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_WUP31gLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WUP31wLeEeWYjb-y0UE98Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_WUP30QLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="10" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WUP30gLeEeWYjb-y0UE98Q" x="220" y="499" width="50" height="50"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_0klfQgLdEeWYjb-y0UE98Q"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_0klfQwLdEeWYjb-y0UE98Q"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0kbuQQLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0kbuQgLdEeWYjb-y0UE98Q" x="25" y="15" width="1068" height="613"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_0kR9QgLdEeWYjb-y0UE98Q"/>
+          <edges xmi:type="notation:Edge" xmi:id="__3pvAALdEeWYjb-y0UE98Q" type="4001" element="__2nNIALdEeWYjb-y0UE98Q" source="__3f98ALdEeWYjb-y0UE98Q" target="__3f99QLdEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="__3zf8ALdEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3zf8QLdEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__3zf8gLdEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3zf8wLdEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__3zf9ALdEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3zf9QLdEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__3pvAQLdEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__3pvAgLdEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="6" bold="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__3pvAwLdEeWYjb-y0UE98Q" points="[-8, 20, 57, -146]$[-58, 146, 7, -20]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__3zf9gLdEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__3zf9wLdEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_AzWiSALeEeWYjb-y0UE98Q" type="4001" element="_AzMxMALeEeWYjb-y0UE98Q" source="_AzWiMALeEeWYjb-y0UE98Q" target="_AzWiNQLeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_AzWiTALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiTQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AzWiTgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiTwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AzWiUALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AzWiUQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_AzWiSQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_AzWiSgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="6" bold="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AzWiSwLeEeWYjb-y0UE98Q" points="[20, -4, -81, 16]$[81, -17, -20, 3]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y8wyPALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y8wyPQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_BSDQcwLeEeWYjb-y0UE98Q" type="4001" element="_BR6GcALeEeWYjb-y0UE98Q" source="_BR6GdQLeEeWYjb-y0UE98Q" target="_BSDQYALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_BSDQdwLeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQeALeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BSDQeQLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQegLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BSDQewLeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BSDQfALeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_BSDQdALeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_BSDQdQLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="6" bold="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BSDQdgLeEeWYjb-y0UE98Q" points="[20, -17, -60, 50]$[60, -51, -20, 16]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LGCnEALrEeWs-tlsiATk0Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LGCnEQLrEeWs-tlsiATk0Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_BuIviALeEeWYjb-y0UE98Q" type="4001" element="_Bt--cALeEeWYjb-y0UE98Q" source="_BuIvcALeEeWYjb-y0UE98Q" target="_BuIvdQLeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_BuIvjALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvjQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BuIvjgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvjwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_BuIvkALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BuIvkQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_BuIviQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_BuIvigLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="6" bold="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BuIviwLeEeWYjb-y0UE98Q" points="[-20, -9, 105, 50]$[-105, -46, 20, 13]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BuIvkgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BuIvkwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_COu7EALeEeWYjb-y0UE98Q" type="4001" element="_COSPIALeEeWYjb-y0UE98Q" source="_BuIvdQLeEeWYjb-y0UE98Q" target="__3f98ALdEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_COu7FALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7FQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_COu7FgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7FwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_COu7GALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7GQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_COu7EQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_COu7EgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_COu7EwLeEeWYjb-y0UE98Q" points="[-20, 1, 45, -4]$[-45, 3, 20, -2]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sGALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sGQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_COu7HALeEeWYjb-y0UE98Q" type="4001" element="_COcAIgLeEeWYjb-y0UE98Q" source="_BuIvgALeEeWYjb-y0UE98Q" target="__3pu-ALdEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_COu7IALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7IQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_COu7IgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7IwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_COu7JALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7JQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_COu7HQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_COu7HgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_COu7HwLeEeWYjb-y0UE98Q" points="[-15, -13, 125, 107]$[-125, -108, 15, 12]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sFgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sFwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_COu7KALeEeWYjb-y0UE98Q" type="4001" element="_COlKEALeEeWYjb-y0UE98Q" source="__3pu-ALdEeWYjb-y0UE98Q" target="_BuIvgALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_COu7LALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_COu7LQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_COu7LgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CO4sEALeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_CO4sEQLeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CO4sEgLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_COu7KQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_COu7KgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_COu7KwLeEeWYjb-y0UE98Q" points="[-165, -132, -305, -252]$[125, 107, -15, -13]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sEwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CO4sFQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DHXzQALeEeWYjb-y0UE98Q" type="4001" element="_DHOpUALeEeWYjb-y0UE98Q" source="__3f99QLdEeWYjb-y0UE98Q" target="_AzWiMALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DHhkQALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkQQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkQgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkQwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkRALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkRQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DHXzQQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DHXzQgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DHXzQwLeEeWYjb-y0UE98Q" points="[13, 20, -26, -39]$[25, 39, -14, -20]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkYALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkYQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DHhkSALeEeWYjb-y0UE98Q" type="4001" element="_DHOpUwLeEeWYjb-y0UE98Q" source="__3pu-ALdEeWYjb-y0UE98Q" target="_AzWiQALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DHhkTALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkTQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkTgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkTwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkUALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkUQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DHhkSQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DHhkSgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DHhkSwLeEeWYjb-y0UE98Q" points="[-15, 12, 130, -108]$[-130, 107, 15, -13]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkYwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkZALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DHhkVALeEeWYjb-y0UE98Q" type="4001" element="_DHOpWALeEeWYjb-y0UE98Q" source="_AzWiQALeEeWYjb-y0UE98Q" target="__3pu-ALdEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DHhkWALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkWQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkWgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkWwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DHhkXALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DHhkXQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DHhkVQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DHhkVgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DHhkVwLeEeWYjb-y0UE98Q" points="[-155, 98, -300, 218]$[130, -108, -15, 12]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkXgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DHhkYgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DoVLQALeEeWYjb-y0UE98Q" type="4001" element="_Dn4fUALeEeWYjb-y0UE98Q" source="_AzWiNQLeEeWYjb-y0UE98Q" target="_BR6GdQLeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DoVLRALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLRQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLRgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLRwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLSALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLSQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DoVLQQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DoVLQgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DoVLQwLeEeWYjb-y0UE98Q" points="[20, -10, -30, 15]$[30, -15, -20, 10]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLZgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLZwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DoVLTALeEeWYjb-y0UE98Q" type="4001" element="_Dn4fUwLeEeWYjb-y0UE98Q" source="_AzWiQALeEeWYjb-y0UE98Q" target="_BSDQawLeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DoVLUALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLUQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLUgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLUwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLVALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLVQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DoVLTQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DoVLTgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DoVLTwLeEeWYjb-y0UE98Q" points="[15, 8, -145, -87]$[145, 86, -15, -9]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLZALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLZQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_DoVLWALeEeWYjb-y0UE98Q" type="4001" element="_Dn4fWALeEeWYjb-y0UE98Q" source="_BSDQawLeEeWYjb-y0UE98Q" target="_AzWiQALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_DoVLXALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLXQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLXgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLXwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DoVLYALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DoVLYQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_DoVLWQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_DoVLWgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DoVLWwLeEeWYjb-y0UE98Q" points="[120, 68, 280, 163]$[-145, -87, 15, 8]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLYgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DoVLaALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ESmQQALeEeWYjb-y0UE98Q" type="4001" element="_ESSuQALeEeWYjb-y0UE98Q" source="_BSDQYALeEeWYjb-y0UE98Q" target="_BuIvcALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_ESmQRALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESmQRQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESmQRgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESmQRwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESmQSALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESmQSQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ESmQQQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ESmQQgLeEeWYjb-y0UE98Q" fontName="Segoe UI"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ESmQQwLeEeWYjb-y0UE98Q" points="[-6, -20, 9, 39]$[-10, -39, 5, 20]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaQgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaQwLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ESmQTALeEeWYjb-y0UE98Q" type="4001" element="_ESSuQwLeEeWYjb-y0UE98Q" source="_BSDQawLeEeWYjb-y0UE98Q" target="_BuIvgALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_ESmQUALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESmQUQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESvaMALeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESvaMQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESvaMgLeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESvaMwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ESmQTQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ESmQTgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ESmQTwLeEeWYjb-y0UE98Q" points="[15, -12, -110, 83]$[110, -84, -15, 11]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaRQLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaRgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_ESvaNgLeEeWYjb-y0UE98Q" type="4001" element="_EScfQALeEeWYjb-y0UE98Q" source="_BuIvgALeEeWYjb-y0UE98Q" target="_BSDQawLeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_ESvaOgLeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESvaOwLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESvaPALeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESvaPQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ESvaPgLeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ESvaPwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_ESvaNwLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_ESvaOALeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ESvaOQLeEeWYjb-y0UE98Q" points="[85, -122, 210, -217]$[-110, 83, 15, -12]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaQALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ESvaRALeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_Y8wyMALeEeWYjb-y0UE98Q" type="4001" element="_Y8d3QALeEeWYjb-y0UE98Q" source="_WUP30ALeEeWYjb-y0UE98Q" target="_AzWiSALeEeWYjb-y0UE98Q">
+            <children xmi:type="notation:Node" xmi:id="_Y8wyNALeEeWYjb-y0UE98Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y8wyNQLeEeWYjb-y0UE98Q" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Y8wyNgLeEeWYjb-y0UE98Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y8wyNwLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Y8wyOALeEeWYjb-y0UE98Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y8wyOQLeEeWYjb-y0UE98Q" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y8wyMQLeEeWYjb-y0UE98Q"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_Y8wyMgLeEeWYjb-y0UE98Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y8wyMwLeEeWYjb-y0UE98Q" points="[245, 514, 245, 514]$[164, 298, 164, 298]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y8wyOgLeEeWYjb-y0UE98Q" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y8wyOwLeEeWYjb-y0UE98Q" id="(0.49645390070921985,0.5)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_0j_CUQLdEeWYjb-y0UE98Q" name="My Little Little World" tooltipText="My Little Little World">
+        <target xmi:type="hu.bme.mit.rnd:World" href="Probacska.sihuhu#My Little Little World"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:World" href="Probacska.sihuhu#My Little Little World"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_0j_CUgLdEeWYjb-y0UE98Q" labelSize="12" labelFormat="bold" showIcon="false" backgroundStyle="GradientTopToBottom">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_0j_CUwLdEeWYjb-y0UE98Q"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_0j_CVALdEeWYjb-y0UE98Q"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_0j_CVQLdEeWYjb-y0UE98Q" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_0j_CVgLdEeWYjb-y0UE98Q" red="233" green="185" blue="110"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9mdvcALdEeWYjb-y0UE98Q" name="T1" tooltipText="T1">
+          <target xmi:type="hu.bme.mit.rnd:Track" href="Probacska.sihuhu#T1"/>
+          <semanticElements xmi:type="hu.bme.mit.rnd:Track" href="Probacska.sihuhu#T1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9mdvcQLdEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelAlignment="LEFT" backgroundStyle="GradientTopToBottom">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_9mdvcgLdEeWYjb-y0UE98Q"/>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_9mdvcwLdEeWYjb-y0UE98Q"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_9mdvdALdEeWYjb-y0UE98Q" red="255" green="255" blue="255"/>
+            <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_9mdvdQLdEeWYjb-y0UE98Q" red="209" green="209" blue="209"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__2dcIALdEeWYjb-y0UE98Q" name="R1_from_R4" outgoingEdges="__2nNIALdEeWYjb-y0UE98Q" incomingEdges="_COSPIALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R1_from_R4"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R1_from_R4"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="__2dcIQLdEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcIgLdEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcIwLdEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcJALdEeWYjb-y0UE98Q" red="246" green="139" blue="139"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AzDAMALeEeWYjb-y0UE98Q" name="R2_from_R1" outgoingEdges="_AzMxMALeEeWYjb-y0UE98Q" incomingEdges="_DHOpUALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R2_from_R1"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R2_from_R1"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_AzDAMQLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDAMgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDAMwLeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDANALeEeWYjb-y0UE98Q" red="246" green="139" blue="139"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BRmkcALeEeWYjb-y0UE98Q" name="R3_from_R2" outgoingEdges="_BR6GcALeEeWYjb-y0UE98Q" incomingEdges="_Dn4fUALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R3_from_R2"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R3_from_R2"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_BRmkcQLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BRmkcgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BRmkcwLeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_BRmkdALeEeWYjb-y0UE98Q" red="246" green="139" blue="139"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BtsDgALeEeWYjb-y0UE98Q" name="R4_from_R3" outgoingEdges="_Bt--cALeEeWYjb-y0UE98Q" incomingEdges="_ESSuQALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R4_from_R3"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R4_from_R3"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_BtsDgQLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BtsDggLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BtsDgwLeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_BtsDhALeEeWYjb-y0UE98Q" red="246" green="139" blue="139"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20From%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__2dcJQLdEeWYjb-y0UE98Q" name="R1_to_R2" outgoingEdges="_DHOpUALeEeWYjb-y0UE98Q" incomingEdges="__2nNIALdEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R1_to_R2"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R1_to_R2"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="__2dcJgLdEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcJwLdEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcKALdEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="__2dcKQLdEeWYjb-y0UE98Q" red="253" green="206" blue="137"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AzDANQLeEeWYjb-y0UE98Q" name="R2_to_R3" outgoingEdges="_Dn4fUALeEeWYjb-y0UE98Q" incomingEdges="_AzMxMALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R2_to_R3"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R2_to_R3"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_AzDANgLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDANwLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDAOALeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_AzDAOQLeEeWYjb-y0UE98Q" red="253" green="206" blue="137"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BRwVcALeEeWYjb-y0UE98Q" name="R3_to_R4" outgoingEdges="_ESSuQALeEeWYjb-y0UE98Q" incomingEdges="_BR6GcALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R3_to_R4"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R3_to_R4"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_BRwVcQLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BRwVcgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BRwVcwLeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_BRwVdALeEeWYjb-y0UE98Q" red="253" green="206" blue="137"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Bt10gALeEeWYjb-y0UE98Q" name="R4_to_R1" outgoingEdges="_COSPIALeEeWYjb-y0UE98Q" incomingEdges="_Bt--cALeEeWYjb-y0UE98Q" width="4" height="4" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R4_to_R1"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Signal" href="Probacska.sihuhu#R4_to_R1"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_Bt10gQLeEeWYjb-y0UE98Q" showIcon="false" labelPosition="node" strokeSizeComputationExpression="4">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Bt10ggLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Bt10gwLeEeWYjb-y0UE98Q"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Bt10hALeEeWYjb-y0UE98Q" red="253" green="206" blue="137"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@containerMappings[name='DisplayWorld']/@subContainerMappings[name='DisplayTrack']/@subNodeMappings[name='Rail%20To%20Signal']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9nsegALdEeWYjb-y0UE98Q" name="T1" tooltipText="T1">
+          <target xmi:type="hu.bme.mit.rnd:Track" href="Probacska.sihuhu#T1"/>
+          <semanticElements xmi:type="hu.bme.mit.rnd:Track" href="Probacska.sihuhu#T1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9nsegQLdEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelAlignment="LEFT" backgroundStyle="GradientTopToBottom">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_9nseggLdEeWYjb-y0UE98Q"/>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_9nsegwLdEeWYjb-y0UE98Q"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_9nsehALdEeWYjb-y0UE98Q" red="204" green="242" blue="166"/>
+            <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_9nsehQLdEeWYjb-y0UE98Q" red="204" green="242" blue="166"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="__01EcALdEeWYjb-y0UE98Q" name="R1" tooltipText="R1" outgoingEdges="_COlKEALeEeWYjb-y0UE98Q _DHOpUwLeEeWYjb-y0UE98Q" incomingEdges="_COcAIgLeEeWYjb-y0UE98Q _DHOpWALeEeWYjb-y0UE98Q" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+            <ownedStyle xmi:type="diagram:Square" xmi:id="__0-1cALdEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__0-1cQLdEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__0-1cgLdEeWYjb-y0UE98Q"/>
+              <color xmi:type="viewpoint:RGBValues" xmi:id="__0-1cwLdEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AyeYcALeEeWYjb-y0UE98Q" name="R2" tooltipText="R2" outgoingEdges="_DHOpWALeEeWYjb-y0UE98Q _Dn4fUwLeEeWYjb-y0UE98Q" incomingEdges="_DHOpUwLeEeWYjb-y0UE98Q _Dn4fWALeEeWYjb-y0UE98Q" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+            <ownedStyle xmi:type="diagram:Square" xmi:id="_AyeYcQLeEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AyeYcgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AyeYcwLeEeWYjb-y0UE98Q"/>
+              <color xmi:type="viewpoint:RGBValues" xmi:id="_AyeYdALeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BRKfkALeEeWYjb-y0UE98Q" name="R3" tooltipText="R3" outgoingEdges="_Dn4fWALeEeWYjb-y0UE98Q _ESSuQwLeEeWYjb-y0UE98Q" incomingEdges="_Dn4fUwLeEeWYjb-y0UE98Q _EScfQALeEeWYjb-y0UE98Q" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+            <ownedStyle xmi:type="diagram:Square" xmi:id="_BRKfkQLeEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BRKfkgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BRKfkwLeEeWYjb-y0UE98Q"/>
+              <color xmi:type="viewpoint:RGBValues" xmi:id="_BRKflALeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BtLtMALeEeWYjb-y0UE98Q" name="R4" tooltipText="R4" outgoingEdges="_COcAIgLeEeWYjb-y0UE98Q _EScfQALeEeWYjb-y0UE98Q" incomingEdges="_COlKEALeEeWYjb-y0UE98Q _ESSuQwLeEeWYjb-y0UE98Q" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+            <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+            <ownedStyle xmi:type="diagram:Square" xmi:id="_BtLtMQLeEeWYjb-y0UE98Q" labelFormat="bold" showIcon="false" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_BtLtMgLeEeWYjb-y0UE98Q"/>
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_BtLtMwLeEeWYjb-y0UE98Q"/>
+              <color xmi:type="viewpoint:RGBValues" xmi:id="_BtLtNALeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@containerMappings[name='EditorWorld']/@subContainerMappings[name='EditorTrack']/@subNodeMappings[name='Rail']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_WRhT8ALeEeWYjb-y0UE98Q" name="Train1" outgoingEdges="_Y8d3QALeEeWYjb-y0UE98Q" width="5" height="5">
+          <target xmi:type="hu.bme.mit.rnd:Train" href="Probacska.sihuhu#Train1"/>
+          <semanticElements xmi:type="hu.bme.mit.rnd:Train" href="Probacska.sihuhu#Train1"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_WRrE8ALeEeWYjb-y0UE98Q" labelSize="10" labelFormat="bold" showIcon="false" labelAlignment="RIGHT" workspacePath="/hu.bme.mit.rnd.sihuhu.design/images/train.png">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_WRrE8QLeEeWYjb-y0UE98Q"/>
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_WRrE8gLeEeWYjb-y0UE98Q" red="252" green="233" blue="79"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer/@containerMappings[name='worldContainer']/@subNodeMappings[name='Train']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="__2nNIALdEeWYjb-y0UE98Q" name="R1" sourceNode="__2dcIALdEeWYjb-y0UE98Q" targetNode="__2dcJQLdEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__26IEALdEeWYjb-y0UE98Q" lineStyle="dash" size="4" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="__26IEQLdEeWYjb-y0UE98Q"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="__26IEgLdEeWYjb-y0UE98Q" labelSize="6" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__26IEwLdEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_AzMxMALeEeWYjb-y0UE98Q" incomingEdges="_Y8d3QALeEeWYjb-y0UE98Q" sourceNode="_AzDAMALeEeWYjb-y0UE98Q" targetNode="_AzDANQLeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Y8UGQALeEeWYjb-y0UE98Q" size="5" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']/@conditionnalStyles.0/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Y8UGQQLeEeWYjb-y0UE98Q" red="156" green="12" blue="12"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Y8UGQgLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Y8UGQwLeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_BR6GcALeEeWYjb-y0UE98Q" name="R3" sourceNode="_BRmkcALeEeWYjb-y0UE98Q" targetNode="_BRwVcALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFbjEALrEeWs-tlsiATk0Q" lineStyle="dash" size="4" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_LFbjEQLrEeWs-tlsiATk0Q"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFbjEgLrEeWs-tlsiATk0Q" labelSize="6" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_LFbjEwLrEeWs-tlsiATk0Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Bt--cALeEeWYjb-y0UE98Q" name="R4" sourceNode="_BtsDgALeEeWYjb-y0UE98Q" targetNode="_Bt10gALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Bt--cQLeEeWYjb-y0UE98Q" lineStyle="dash" size="4" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Bt--cgLeEeWYjb-y0UE98Q"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Bt--cwLeEeWYjb-y0UE98Q" labelSize="6" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Bt--dALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='RailEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_COSPIALeEeWYjb-y0UE98Q" sourceNode="_Bt10gALeEeWYjb-y0UE98Q" targetNode="__2dcIALdEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_COcAIALeEeWYjb-y0UE98Q" lineStyle="dot" sourceArrow="OutputArrow" targetArrow="OutputArrow" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_COcAIQLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_COcAIgLeEeWYjb-y0UE98Q" sourceNode="_BtLtMALeEeWYjb-y0UE98Q" targetNode="__01EcALdEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_COcAIwLeEeWYjb-y0UE98Q" size="2" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_COcAJALeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_COcAJQLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_COcAJgLeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_COlKEALeEeWYjb-y0UE98Q" sourceNode="__01EcALdEeWYjb-y0UE98Q" targetNode="_BtLtMALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_COlKEQLeEeWYjb-y0UE98Q" size="2" centered="Target">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_COlKEgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_COlKEwLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_COlKFALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_DHOpUALeEeWYjb-y0UE98Q" sourceNode="__2dcJQLdEeWYjb-y0UE98Q" targetNode="_AzDAMALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_DHOpUQLeEeWYjb-y0UE98Q" lineStyle="dot" sourceArrow="OutputArrow" targetArrow="OutputArrow" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_DHOpUgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_DHOpUwLeEeWYjb-y0UE98Q" sourceNode="__01EcALdEeWYjb-y0UE98Q" targetNode="_AyeYcALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_DHOpVALeEeWYjb-y0UE98Q" size="2" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_DHOpVQLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_DHOpVgLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_DHOpVwLeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_DHOpWALeEeWYjb-y0UE98Q" sourceNode="_AyeYcALeEeWYjb-y0UE98Q" targetNode="__01EcALdEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_DHOpWQLeEeWYjb-y0UE98Q" size="2" centered="Target">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_DHOpWgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_DHOpWwLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_DHOpXALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Dn4fUALeEeWYjb-y0UE98Q" sourceNode="_AzDANQLeEeWYjb-y0UE98Q" targetNode="_BRmkcALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Dn4fUQLeEeWYjb-y0UE98Q" lineStyle="dot" sourceArrow="OutputArrow" targetArrow="OutputArrow" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Dn4fUgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Dn4fUwLeEeWYjb-y0UE98Q" sourceNode="_AyeYcALeEeWYjb-y0UE98Q" targetNode="_BRKfkALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Dn4fVALeEeWYjb-y0UE98Q" size="2" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Dn4fVQLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Dn4fVgLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Dn4fVwLeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Dn4fWALeEeWYjb-y0UE98Q" sourceNode="_BRKfkALeEeWYjb-y0UE98Q" targetNode="_AyeYcALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Dn4fWQLeEeWYjb-y0UE98Q" size="2" centered="Target">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Dn4fWgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Dn4fWwLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Dn4fXALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ESSuQALeEeWYjb-y0UE98Q" sourceNode="_BRwVcALeEeWYjb-y0UE98Q" targetNode="_BtsDgALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ESSuQQLeEeWYjb-y0UE98Q" lineStyle="dot" sourceArrow="OutputArrow" targetArrow="OutputArrow" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_ESSuQgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='NeighborSignalEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ESSuQwLeEeWYjb-y0UE98Q" sourceNode="_BRKfkALeEeWYjb-y0UE98Q" targetNode="_BtLtMALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ESSuRALeEeWYjb-y0UE98Q" size="2" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_ESSuRQLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ESSuRgLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_ESSuRwLeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20To%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_EScfQALeEeWYjb-y0UE98Q" sourceNode="_BtLtMALeEeWYjb-y0UE98Q" targetNode="_BRKfkALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Rail" href="Probacska.sihuhu#R4"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_EScfQQLeEeWYjb-y0UE98Q" size="2" centered="Target">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_EScfQgLeEeWYjb-y0UE98Q" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_EScfQwLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_EScfRALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']/@edgeMappings[name='Rail%20From%20Connection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Y8d3QALeEeWYjb-y0UE98Q" sourceNode="_WRhT8ALeEeWYjb-y0UE98Q" targetNode="_AzMxMALeEeWYjb-y0UE98Q">
+        <target xmi:type="hu.bme.mit.rnd:Train" href="Probacska.sihuhu#Train1"/>
+        <semanticElements xmi:type="hu.bme.mit.rnd:Train" href="Probacska.sihuhu#Train1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Y8d3QQLeEeWYjb-y0UE98Q" targetArrow="NoDecoration" centered="Both">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='TrainOnRail']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_Y8d3QgLeEeWYjb-y0UE98Q" red="156" green="12" blue="12"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Y8d3QwLeEeWYjb-y0UE98Q">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Y8d3RALeEeWYjb-y0UE98Q"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']/@edgeMappings[name='TrainOnRail']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_0j_CVwLdEeWYjb-y0UE98Q"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='DisplayLayer']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']/@ownedRepresentations[name='World%20diagram']/@additionalLayers[name='EditorLayer']"/>
+      <target xmi:type="hu.bme.mit.rnd:World" href="Probacska.sihuhu#My Little Little World"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/hu.bme.mit.rnd.sihuhu.design/description/sihuhu.odesign#//@ownedViewpoints[name='world']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

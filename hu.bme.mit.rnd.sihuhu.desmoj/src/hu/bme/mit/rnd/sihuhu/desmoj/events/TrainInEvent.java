@@ -2,14 +2,18 @@ package hu.bme.mit.rnd.sihuhu.desmoj.events;
 
 import org.eclipse.emf.transaction.RecordingCommand;
 
+import Behavior.Component;
+import hu.bme.mit.rnd.behavior.handler.BehaviorModelManager;
 import hu.bme.mit.rnd.sihuhu.desmoj.SihuhuSimulationModel;
-import hu.bme.mit.rnd.sihuhu.desmoj.entities.TrackElementEntity;
 import hu.bme.mit.rnd.sihuhu.desmoj.entities.TrainEntity;
-import desmoj.core.simulator.EventOf2Entities;
+import hu.bme.mit.rnd.sihuhu.sihuhu.Rail;
+import hu.bme.mit.rnd.sihuhu.sihuhu.Switch;
+import hu.bme.mit.rnd.sihuhu.sihuhu.TrackElement;
+import desmoj.core.simulator.Event;
 import desmoj.core.simulator.Model;
 
-public class TrainInEvent extends EventOf2Entities<TrainEntity, TrackElementEntity>{
-	
+public class TrainInEvent extends Event<TrainEntity> {
+
 	private SihuhuSimulationModel model;
 
 	public TrainInEvent(Model owner, String name, boolean showInTrace) {
@@ -18,39 +22,105 @@ public class TrainInEvent extends EventOf2Entities<TrainEntity, TrackElementEnti
 	}
 
 	@Override
-	public void eventRoutine(TrainEntity train1, TrackElementEntity trackElem1) {
+	public void eventRoutine(TrainEntity train1) {
 
-		System.out.println("Train ("+ train1.myTrain.getName() +") came in ("+trackElem1.myElement.getName()+")!");
-		// TODO Implement this using the dynamic model!
-		
-		if (trackElem1.myElement.getTrain()==null) {
-			// For the sake of Shininess
-			model.editingDomain.getCommandStack().execute(new RecordingCommand(model.editingDomain) {
-				@Override
-				protected void doExecute() {
-					//Dummy implementation, works with Tanszek.sihuhu
-					trackElem1.myElement.setTrain(train1.myTrain);
-					train1.myTrain.setNextElement(model.trackElements.get("R8").myElement);
-					train1.myTrain.getOnTracks().remove(model.trackElements.get("C3").myElement);
+		if (model.isDebug)
+			System.out.println("Train in Event! :" + train1.myTrain.getName());
+
+		if (train1.myTrain.getNextElement() == null)
+			return;
+		for (TrackElement te : train1.myTrain.getOnTracks()) {
+			if (isGreen(te, train1.myTrain.getNextElement())) {
+
+				// If it is the next Element and it has Green light
+				Rail newRail = getEffectiveElement(train1.myTrain
+						.getNextElement());
+				if (newRail == null)
+					break;
+
+				// Calculate the NEW next element (could be null!)
+				TrackElement newNextElem = null;
+				if (te.equals(getEffectiveElement(newRail.getFrom()))) {
+					newNextElem = newRail.getTo();
+				} else if (te.equals(getEffectiveElement(newRail.getTo()))) {
+					newNextElem = newRail.getFrom();
 				}
-			});
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+				TrackElement newNext = newNextElem;
+
+				// Modify the dynamic model
+				BehaviorModelManager.eventComesIn(
+						model.dynSystem,
+						model.dynEvents.get("trainIn"
+								+ csillamize(newRail.getName())));
+
+				System.out.println("Train (" + train1.myTrain.getName()
+						+ ") came into " + newRail.getName());
+
+				if (model.isDebug)
+					for (Component c : model.dynComponents.values()) {
+						System.out.println("        COMP: " + c.getName()
+								+ " STAT: " + c.getCurrentState().getName());
+					}
+
+				// Modify the structural model
+				model.editingDomain.getCommandStack().execute(
+						new RecordingCommand(model.editingDomain) {
+							@Override
+							protected void doExecute() {
+								newRail.setTrain(train1.myTrain);
+								train1.myTrain.setNextElement(newNext);
+							}
+						});
+
+				pause();
+				break;
+			}
+
 		}
-		
-		System.out.println("SIHUHU!!!");}
-		
-		//train1.myTrain.setNextElement(train1.myTrain.getOnTracks().get(0));
-		//train1.myTrain.getOnTracks().add(train1.myTrain.getOnTracks().get(0));
-		
-		
-		//TrainInEvent trainInEvent = new TrainInEvent(model, "Train comes In event", true);
-		//trainInEvent.schedule(train1, model.trackElements.get("t1segS1"), new TimeSpan(1, TimeUnit.MINUTES));
-		
-		
+
 	}
 
+	private boolean isGreen(TrackElement trackElem1, TrackElement trackElem2) {
+		try {
+			String signalName = "signal" + csillamize(trackElem1.getName())
+					+ "To" + csillamize(trackElem2.getName());
+			Component comp = model.dynComponents.get(signalName);
+			if (comp == null)
+				return false;
+			String stateName = comp.getCurrentState().getName();
+			if ((signalName + "Green").equals(stateName))
+				return true;
+		} catch (Exception e) {
+			System.out.println("Error with component!");
+			return false;
+		}
+
+		return false;
+	}
+
+	private Rail getEffectiveElement(TrackElement te) {
+		try {
+			if (model.switches.get(te.getName()) != null) {
+				Switch sw = (Switch) te;
+				return sw.getActiveConnection();
+			}
+			return (Rail) te;
+		} catch (Exception e) {
+			System.out.println("Error with Rail!");
+			return null;
+		}
+
+	}
+
+	private String csillamize(final String s) {
+		return Character.toUpperCase(s.charAt(0)) + s.substring(1);
+	}
+
+	private void pause() {
+		if (model.isGraphical)
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+			}
+	}
 }
