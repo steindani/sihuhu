@@ -19,6 +19,7 @@ import Behavior.Component;
 import Behavior.Event;
 import desmoj.core.simulator.Model;
 import desmoj.core.simulator.TimeInstant;
+import desmoj.core.statistic.TextHistogram;
 
 public class SihuhuSimulationModel extends Model {
 
@@ -36,6 +37,7 @@ public class SihuhuSimulationModel extends Model {
 	public TransactionalEditingDomain editingDomain;
 	public boolean isGraphical;
 	public boolean isDebug = false;
+	public TextHistogram railFrequencyHistogram;
 
 
 	public SihuhuSimulationModel(Resource structuralRes, Resource dynamicRes, boolean fromGraphical, Model owner, String name,
@@ -72,6 +74,7 @@ public class SihuhuSimulationModel extends Model {
 		switches = new HashMap<String, Switch>();
 		dynComponents = new HashMap<String, Component>();
 		dynEvents = new HashMap<String, Event>();
+		railFrequencyHistogram = new TextHistogram(this, "Rail usage frequency", true, false);
 		
 		World world = ((World) resourceStructural.getContents().get(0));
 		

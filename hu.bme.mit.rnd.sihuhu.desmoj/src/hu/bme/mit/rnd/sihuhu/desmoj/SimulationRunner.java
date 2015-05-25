@@ -31,7 +31,7 @@ public class SimulationRunner {
         experiment.traceOn(new TimeInstant(0));
 
         // Set when to stop the simulation
-        experiment.stop(new TimeInstant(12, TimeUnit.MINUTES));
+        experiment.stop(new TimeInstant(1, TimeUnit.HOURS));
         
         class runThread extends Thread{
         	@Override
